@@ -1,0 +1,16 @@
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\bin\Debug\BikeShop.exe.config
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\bin\Debug\BikeShop.exe
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\bin\Debug\BikeShop.pdb
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\Contact.g.cs
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\MainWindow.g.cs
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\App.g.cs
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop_MarkupCompile.cache
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop_MarkupCompile.lref
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\Contact.baml
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\MainWindow.baml
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop.g.resources
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop.Properties.Resources.resources
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop.csproj.GenerateResource.cache
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop.csproj.CoreCompileInputs.cache
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop.exe
+D:\Codes\GitRepository\CS_LearningWPFMVVMInOneWeek\BikeShop\obj\Debug\BikeShop.pdb
