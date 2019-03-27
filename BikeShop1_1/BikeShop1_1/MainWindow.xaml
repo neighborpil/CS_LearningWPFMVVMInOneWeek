@@ -1,0 +1,23 @@
+﻿<Window x:Class="BikeShop1_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BikeShop1_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Frame Source="/Contact.xaml"></Frame>
+        <Label xmlns:bl="clr-namespace:BikeShop1_1">
+            <bl:Car Color="Red">
+                <bl:Car.Driver>
+                    <bl:Human FirstName="Nick"
+                              HasDrivingLicense="true" />
+                </bl:Car.Driver>
+            </bl:Car>
+        </Label>
+        <Label xmlns:bl2="clr-namespace:BikeShop1_1">
+            <bl2:Car x:Name="myCar" Speed="100" Color="Red"></bl2:Car>
+        </Label>
+    </StackPanel>
+</Window>

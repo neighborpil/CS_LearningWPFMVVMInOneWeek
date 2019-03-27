@@ -75,5 +75,10 @@
                 <Button Content="A"></Button>
             </Viewbox>
         </Grid>
+        <Label>
+            <Hyperlink NavigateUri="/Payment.xaml">
+                Pay now
+            </Hyperlink>
+        </Label>
     </StackPanel>
 </Window>
