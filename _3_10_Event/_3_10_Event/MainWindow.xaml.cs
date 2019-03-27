@@ -76,5 +76,42 @@ namespace _3_10_Event
             MessageBox.Show("Goodbye2");
 
         }
+
+        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("double click");
+
+        }
+
+        private void Button_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+
+                MessageBox.Show("mouse down");
+            }
+
+            e.Handled = true;
+
+        }
+
+        private void Button_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("mouse down");
+
+            e.Handled = true;
+
+        }
+
+        private void Button_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Button_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("preview mouse down");
+
+        }
     }
 }

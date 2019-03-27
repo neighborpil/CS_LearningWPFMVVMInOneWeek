@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:_3_10_Event"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel MouseDown="SaySomething">
+    <StackPanel PreviewMouseLeftButtonDown="SayGoodBye">
         <Button Content="Greet" Click="Greet" />
-        <Button Content="test" MouseDown="Button_MouseDown_1" ></Button>
+        <Button Content="test" MouseLeftButtonDown="Button_MouseLeftButtonDown_1" PreviewMouseDown="Button_PreviewMouseDown" PreviewMouseLeftButtonDown="Button_PreviewMouseLeftButtonDown"></Button>
         <Button Content="MouseLeftButtonDown" MouseDown="Button_MouseDown" />
         <Button Content="MouseLeftButtonDown2" MouseDown="Button_MouseDown2" />
     </StackPanel>
