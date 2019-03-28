@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Products" HorizontalAlignment="Left" Margin="94,153,0,0" VerticalAlignment="Top" Width="75" Height="71"/>
+        <Button Content="Live Support" HorizontalAlignment="Left" Margin="189,153,0,0" VerticalAlignment="Top" Width="75" Height="71"/>
+        <Button Content="Email Support" HorizontalAlignment="Left" Margin="288,153,0,0" VerticalAlignment="Top" Width="75" Height="71"/>
+        <TextBlock HorizontalAlignment="Left" Margin="76,263,0,0" TextWrapping="Wrap" Text="Adventure Works" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" FontStyle="Italic"/>
+
     </Grid>
 </Window>
