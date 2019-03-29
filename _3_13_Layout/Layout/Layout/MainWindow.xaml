@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Canvas Width="50" Height="50"
-                Background="Orange">
-            <Button Content="Hello World" Margin="5" />
-        </Canvas>
+        <!--<Frame Source="/CanvasTest.xaml"></Frame>-->
+        <!--<Frame Source="/CanvasTest2.xaml"></Frame>-->
+        <!--<Frame Source="/StackPanelHorizontal.xaml" />-->
+        <!--<Frame Source="/DockPanelTest.xaml" />-->
+        <!--<Frame Source="/WrapPanelTest.xaml" />-->
+        <!--<Frame Source="/UniformGridTest.xaml" />-->
+        <!--<Frame Source="/GridTest.xaml" />-->
+        <Frame Source="/ListControlTest.xaml" />
     </Grid>
 </Window>

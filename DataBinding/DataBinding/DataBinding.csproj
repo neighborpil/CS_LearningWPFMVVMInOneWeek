@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9852BD02-B27C-44E1-B669-00200A8A7FB5}</ProjectGuid>
+    <ProjectGuid>{8200CB65-56E6-4D05-BFF5-68840CD93F89}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Layout</RootNamespace>
-    <AssemblyName>Layout</AssemblyName>
+    <RootNamespace>DataBinding</RootNamespace>
+    <AssemblyName>DataBinding</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,41 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DockPanelTest.xaml.cs">
-      <DependentUpon>DockPanelTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GridTest.xaml.cs">
-      <DependentUpon>GridTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListControlTest.xaml.cs">
-      <DependentUpon>ListControlTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StackPanelHorizontal.xaml.cs">
-      <DependentUpon>StackPanelHorizontal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UniformGridTest.xaml.cs">
-      <DependentUpon>UniformGridTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WrapPanelTest.xaml.cs">
-      <DependentUpon>WrapPanelTest.xaml</DependentUpon>
-    </Compile>
-    <Page Include="CanvasTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CanvasTest2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DockPanelTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GridTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ListControlTest.xaml">
+    <Page Include="DataBindingTest1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -101,28 +67,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CanvasTest.xaml.cs">
-      <DependentUpon>CanvasTest.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CanvasTest2.xaml.cs">
-      <DependentUpon>CanvasTest2.xaml</DependentUpon>
+    <Compile Include="DataBindingTest1.xaml.cs">
+      <DependentUpon>DataBindingTest1.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StackPanelHorizontal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UniformGridTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WrapPanelTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

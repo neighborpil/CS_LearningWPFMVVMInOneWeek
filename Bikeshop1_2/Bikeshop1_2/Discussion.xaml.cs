@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace Bikeshop1_2
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for Discussion.xaml
     /// </summary>
-    public partial class Menu : Page
+    public partial class Discussion : Page
     {
-        public Menu()
+        public Discussion()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(
-                new Uri("/Contact.xaml", UriKind.Relative));
-        }
-
-        private void BtnLiveSupport_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(
-                new Uri("/Discussion.xaml", UriKind.Relative));
         }
     }
 }
