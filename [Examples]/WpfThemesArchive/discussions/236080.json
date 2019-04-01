@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "527151",
+    "ThreadId": "236080",
+    "Html": "\r\n<p>Hi!</p>\r\n<p>I'm using ShinyBlue, which for the most part consists of 4 basic Colors.</p>\r\n<p>What I'm trying to accomplish is binding these colors to my App's Properties, so that they can be permanently altered at runtime. However, since they are used in ControlTemplates,</p>\r\n<p>I'm guessing all colors have to be loaded before the latter are constructed to take full effect. Is there any way to do this without much modification of the theme itself -</p>\r\n<p>preferrably something equivalent to&nbsp; &lt;Color x:Key=&quot;myColor&quot; Binding=&quot;{ /* Binding to Properties-&gt;colorXY */ }&quot;/&gt; ?</p>\r\n<p>BTW, I tried using DynamicResources instead of static ones in the ControlTemplates, didn't seem to help</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance,</p>\r\n<p>Ferdinand</p>\r\n",
+    "PostedDate": "2010-11-25T17:39:59.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -36,5 +36,11 @@ namespace Bikeshop1_2
             NavigationService.Navigate(
                 new Uri("/Discussion.xaml", UriKind.Relative));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(
+                new Uri("/Products.xaml", UriKind.Relative));
+        }
     }
 }

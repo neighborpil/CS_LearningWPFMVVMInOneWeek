@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "196221",
+    "ThreadId": "58038",
+    "Html": "<p>hi,</p>\r\n<p>&nbsp;</p>\r\n<p>ListView is not supported by e.g. Bureau Blue, Bureau Black and others.</p>\r\n<p>Release date for supporting of ListViews ?</p>",
+    "PostedDate": "2009-05-31T18:29:51.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "244683",
+    "ThreadId": "58038",
+    "Html": "<p>I noticed the same...ListViewItem exists in Theme.xaml (ShinyBlue) but not in Theme.xaml (BubbleCreme) etc.</p>",
+    "PostedDate": "2009-10-12T07:36:31.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

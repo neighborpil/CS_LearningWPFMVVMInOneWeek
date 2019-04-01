@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "UXMusingsRoughGreen.xaml and UXMusingsRoughRed.xaml both have the same bug.  Locate the style for the CheckBox.  Slightly down in the style, change this line:\n \n<DoubleAnimation Duration=\"0\" Storyboard.TargetName=\"DisabledVisual\" Storyboard.TargetProperty=\"Opacity\" To=\"\" />\n \nTo:\n \n<DoubleAnimation Duration=\"0\" Storyboard.TargetName=\"DisabledVisual\" Storyboard.TargetProperty=\"Opacity\" To=\"1\" />\n \nYou can also search for an empty double quote block to find it (\"\").",
+    "LastUpdatedDate": "2013-02-21T17:09:57.437-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2011-01-19T12:35:09.26-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "UXMuxingsRoughRed and UXMusingsRoughGreen have a bug with CheckBox Style",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10139
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

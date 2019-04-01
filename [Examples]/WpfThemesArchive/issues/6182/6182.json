@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I choose any of the UX themes {UXMusingsRed, UXMusingsGreen, UXMusingsRoughRed, UXMusingsRoughGreen, UXMusingsBubblyBlue}, I get the following debug info (no exception thrown):\n \nSystem.Windows.Data Error: 4 : Cannot find source for binding with reference 'ElementName=ThemeComboTextBox'. BindingExpression:(no path); DataItem=null; target element is 'Label' (Name=''); target property is 'Target' (type 'UIElement')\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='BlackColor'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='TextBrush'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='NormalBorderBrush'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='NormalBrush'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='WhiteColor'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='WhiteColor'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='DisabledBackgroundBrush'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='DisabledBorderBrush'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='DefaultedBorderBrush'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='WhiteColor'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='WhiteColor'\nSystem.Windows.ResourceDictionary Warning: 9 : Resource not found; ResourceKey='MouseOverBrush'\n \nI can upload XAML to recreate the issue.",
+    "LastUpdatedDate": "2013-02-21T17:10:00.147-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-11-09T14:14:34.713-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "UX* themes do not render windows",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6182
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

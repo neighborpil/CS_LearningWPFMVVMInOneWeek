@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This code fails for the BureauBlue theme (and possibly other themes):\n<ComboBox ItemSource=\"{Binding Plans}\" DisplayMemberPath=\"Name\" />\n \nInstead of displaying the value of the Name property of the Plan class, it just displays MyProject.Plan for every item (basically, the default for plan.ToString()).\n \nOne valid workaround is to define a custom DataTemplate for the ComboBox.",
+    "LastUpdatedDate": "2013-03-04T14:13:00.997-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-01-23T00:12:11.01-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "DisplayMemberPath doesn't work for ComboBox (BureauBlue)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 5,
+    "Id": 6935
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have some problem, Is there a solution ?",
+      "PostedDate": "2010-03-07T03:11:29.07-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I did something like this:\r\n\r\n                        <ComboBox Grid.Column=\"2\" Width=\"100\" ItemsSource=\"{Binding Plans}\" SelectedIndex=\"0\">\r\n                            <ComboBox.ItemTemplate>\r\n                                <DataTemplate>\r\n                                    <TextBlock Text=\"{Binding Name}\" />\r\n                                </DataTemplate>\r\n                            </ComboBox.ItemTemplate>\r\n                        </ComboBox>",
+      "PostedDate": "2010-03-08T11:15:03.8-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-03-25T17:44:43.7-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I got solved changing the template of ComboboxItem, removing the setting of Content and ContentTemplate properties of ContentPresenter.",
+      "PostedDate": "2011-02-20T10:29:02.753-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hay..\r\n\r\nThe \"<TextBlock Text=\"{Binding Name}\" />\" doesn't show anything without ComboBox's DisplayMemberPath.\r\nBut with DisplayMemberPath it shows correctly. But gives an error message \"Cannot set both DisplayMemberPath and ItemTemplate\".\r\n\r\nWhat's now?",
+      "PostedDate": "2011-11-22T19:38:27.097-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-02-09T02:20:51.31-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:09:59.747-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Open the Bureau Blue theme file and change the following line in the comboboxitem style \r\n\r\n          <ContentPresenter x:Name=\"contentPresenter\" Content=\"{TemplateBinding Content}\" ContentTemplate=\"{TemplateBinding ContentTemplate}\"  HorizontalAlignment=\"{TemplateBinding HorizontalContentAlignment}\" Margin=\"{TemplateBinding Padding}\"/>\n             \r\n\r\nTo\r\n\r\n            <ContentPresenter x:Name=\"contentPresenter\" HorizontalAlignment=\"{TemplateBinding HorizontalContentAlignment}\" Margin=\"{TemplateBinding Padding}\"/>\r\n\r\nThat should retain the theme and also fix the issue.\r\n\r\nThanks !!\n",
+      "PostedDate": "2013-03-04T14:13:00.997-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "158668",
+    "ThreadId": "47409",
+    "Html": "Unfortunately the TreeViewItem is not recognized by the current release of the VisualStateManager and thus doesn't have a selected state.<br>\r\n<br>\r\nIn case anyone stumbles upon this, you can work around it by creating a class TreeViewItemBehavior and registering it at application startup by calling VisualStateBehavior.RegisterBehavior.<br>\r\n<br>\r\n<pre>    public class TreeViewItemBehavior : ControlBehavior\r\n    {\r\n        \r\n        // Methods\r\n        protected override void OnAttach( Control control )\r\n        {\r\n            base.OnAttach( control );\r\n            TreeViewItem instance = (TreeViewItem)control;\r\n            Type targetType = typeof( TreeViewItem );\r\n            VisualStateBehavior.AddValueChanged( UIElement.IsMouseOverProperty, targetType, instance, new EventHandler( this.UpdateStateHandler ) );\r\n            VisualStateBehavior.AddValueChanged( TreeViewItem.IsSelectedProperty, targetType, instance, new EventHandler( this.UpdateStateHandler ) );\r\n        }\r\n\r\n        protected override void OnDetach( Control control )\r\n        {\r\n            base.OnDetach( control );\r\n            TreeViewItem instance = (TreeViewItem)control;\r\n            Type targetType = typeof( TreeViewItem );\r\n            VisualStateBehavior.RemoveValueChanged( UIElement.IsMouseOverProperty, targetType, instance, new EventHandler( this.UpdateStateHandler ) );\r\n            VisualStateBehavior.RemoveValueChanged( TreeViewItem.IsSelectedProperty, targetType, instance, new EventHandler( this.UpdateStateHandler ) );\r\n        }\r\n\r\n        protected override void UpdateState( Control control, bool useTransitions )\r\n        {\r\n            TreeViewItem item = (TreeViewItem)control;\r\n            if ( item.IsMouseOver ) {\r\n                VisualStateManager.GoToState( item, &quot;MouseOver&quot;, useTransitions );\r\n            }\r\n            else {\r\n                VisualStateManager.GoToState( item, &quot;Normal&quot;, useTransitions );\r\n            }\r\n            if ( item.IsSelected ) {\r\n                VisualStateManager.GoToState( item, &quot;Selected&quot;, useTransitions );\r\n            }\r\n            else {\r\n                VisualStateManager.GoToState( item, &quot;Unselected&quot;, useTransitions );\r\n            }\r\n            base.UpdateState( control, useTransitions );\r\n        }\r\n\r\n        /// &lt;summary /&gt;\r\n        /// Gets the type of the target.\r\n        /// \r\n        /// &lt;value /&gt;The type of the target.\r\n        protected override Type TargetType\r\n        {\r\n            get\r\n            {\r\n                return typeof( TreeViewItem );\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n</pre>\r\n",
+    "PostedDate": "2009-02-17T13:46:30.763-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "168949",
+    "ThreadId": "47409",
+    "Html": "Has anyone implemented a similar behaviour class for those not already supported by VSM such as Expander control or the ComboBox? I havent successfully been able to myself.\r\n",
+    "PostedDate": "2009-03-17T02:22:41.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

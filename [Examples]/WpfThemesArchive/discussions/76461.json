@@ -1,0 +1,314 @@
+[
+  {
+    "Id": "261327",
+    "ThreadId": "76461",
+    "Html": "<p>Hi,</p>\r\n<p>Is there any plan on releasing the DataGrid theme?</p>",
+    "PostedDate": "2009-11-28T08:57:27.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "264517",
+    "ThreadId": "76461",
+    "Html": "<p>I second this, I've tried a few times taking the original silverlight themes and fixing the errors but I end up with the control not being themed or the control not showing at all.</p>\r\n<p>Support for the calendar, datepicker and datagrid would be great.</p>",
+    "PostedDate": "2009-12-07T08:21:07.58-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "269524",
+    "ThreadId": "76461",
+    "Html": "<p>Use this link for help converting silverlight datagrid themes to wpf</p>\r\n<p>http://msdn.microsoft.com/en-us/library/cc278066%28VS.95%29.aspx</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-21T02:19:45.447-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "269560",
+    "ThreadId": "76461",
+    "Html": "<p>Hi Nobster,</p>\r\n<p>Many thanks! Let me try.</p>",
+    "PostedDate": "2009-12-21T05:50:38.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "269912",
+    "ThreadId": "76461",
+    "Html": "<p>I have uploaded my current BubbleCreme.xaml which includes my attempts at converting the silverlight datagrid styles. I have not been successfull so far but it may help some one else</p>\r\n<p>Two points of interest; In silverlight the root object of the DataGridRow is DataGridFrozenGrid which has not been added to the WPF toolkit for some reason. Looking at the generic xaml and at other sample styles, SelectiveScrollingGrid can be used as an alternative. SelectiveScrollingGrid is part of the primitives namespace (Microsoft.Windows.Controls.Primitives) in the WPFtookit assembly. Secondly the ItemsHost of the DataGrid in silverlight is the DataGridRowsPresenter, but all samples in WPF use a ScrollViewer as part of the ControlTemplate and a ScrollContentPresenter to host the content, not sure the reason for this difference.</p>\r\n<p>You will see both implementations in the uploaded script, the ScrollViewer script is commented out. So far I have not been able to get the DataGridRow and DataGridCell styles to work even if I explicitly specifiy in the DataGrid style. e.g. <span style=\"color:#ff0000\">&lt;Setter Property=&quot;RowStyle&quot; Value = &quot;{StaticResource DataGridRowStyle}&quot;/&gt;&lt;Setter Property=&quot;CellStyle&quot; Value=&quot;{StaticResource DataGridCellStyle}&quot;/&gt;</span> I have also not been able to get the scrollbars to work correctly. If using the scrollviewer implementation using the following xaml with the vertical and horizontal scroll bars do make the bars appear correctly but they still do not actually scroll the data.<span style=\"color:#ff0000\">Visibility=&quot;{TemplateBinding ComputedVerticalScrollBarVisibility}&quot; ViewportSize=&quot;{TemplateBinding ViewportHeight}&quot; <br>Maximum=&quot;{TemplateBinding ScrollableHeight}&quot;&nbsp; Value=&quot;{Binding Path=VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}&quot;</span></p>\r\n<p><span style=\"color:#ff0000\"><span style=\"color:#000000\">This is the location of the xaml.</span></span> http://rapidshare.com/files/324377885/BubbleCreme.xaml</p>\r\n<p>&nbsp;</p>\r\n<p>EDIT 23/12: I've realised why the scrolling wasn't working. I had PART_VerticalScrollbar instead of PART_VerticalScrollBar and similar with the horizontal scroll bar. The PART names are case sensitive it seems. You also need to use the scrollviewer implementation rather then the DataGridRowsPresenter. I am making progress, hopefully should have a working styled DataGrid that I can upload by the end of today.</p>",
+    "PostedDate": "2009-12-22T05:47:59.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "270344",
+    "ThreadId": "76461",
+    "Html": "<p>I have uploaded my most recent BubbleCreme here http://rapidshare.com/files/324933616/BubbleCreme.xaml</p>\r\n<p>This includes a fairly decent looking DataGrid. What's outstanding is as follows</p>\r\n<p>------------------------------------------------------------------------------------------------------------------------</p>\r\n<p>DataGridCell VisualStates not working</p>\r\n<p><br>DataGridColumnHeader Some VisualStates not working</p>\r\n<p><br>DataGridRowHeader Some VisualStates not working</p>\r\n<p><br>Grippers on Headers aren't big enough.</p>\r\n<p><br>Select All functionality not working</p>\r\n<p>---------------------------------------------------------------------------------------------------------------------</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-23T09:15:56.283-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "270561",
+    "ThreadId": "76461",
+    "Html": "<p>I have uploaded updated template for expression dark. Not happy with it yet but it looks ok, I'm sure someone else can do a better job. Some of the visual states are not working here either.</p>\r\n<p>http://rapidshare.com/files/325297214/ExpressionDark2.xaml</p>",
+    "PostedDate": "2009-12-24T04:05:30.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "272106",
+    "ThreadId": "76461",
+    "Html": "<p>Any updates?</p>\r\n<p>I am struggling in converting the Silverlight DataGrid style to WPF.</p>",
+    "PostedDate": "2009-12-31T18:54:56.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "272373",
+    "ThreadId": "76461",
+    "Html": "<p>I haven't looked at it in ages weitzhandler. I may have something next week. I wonder where rudi is though, its his site and he converted the themes originally.</p>",
+    "PostedDate": "2010-01-02T03:53:30.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "272421",
+    "ThreadId": "76461",
+    "Html": "<p>Can't wait, thanks for your response.</p>",
+    "PostedDate": "2010-01-02T11:08:23.977-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "272814",
+    "ThreadId": "76461",
+    "Html": "<p>So far I have datagrid support added to BubbleCreme, ExpressionDark and ExpressionLight (Simply copy from Expression Dark)There are still some visual state animations that are not working for some reason, If anyone can shed some light on this I would appreciate it. I think I will do twightblue next. Weitzhandler do you have a particular theme that you want datagrid added to.</p>\r\n<p>&nbsp;</p>\r\n<p>EDIT: Twilight blue added http://rapidshare.com/files/330149490/TwilightBlue.xaml also check out http://rapidshare.com/files/330149567/Change_Silverlight_DataGrid_to_WPF.txt which explains what I'm doing.</p>\r\n<p>EDIT UXMusings added http://rapidshare.com/files/330200626/UXMusingsGreen.xaml, Rough styles on the way. Please note that I had to play with the Scrollbar style in the theme as well as adding the datagrid support as the horizontal scrollbar was behaving like a vertical scrollbar.</p>\r\n<p>EDIT: UxMusingsRough added http://rapidshare.com/files/330244219/UXMusingsRoughRed.xaml , I had the same problem with the scroll bar so be sure to copy that section as well.</p>",
+    "PostedDate": "2010-01-04T02:14:38.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "272919",
+    "ThreadId": "76461",
+    "Html": "<p>Updated Themes pack here&nbsp; http://rapidshare.com/files/330242600/Skins.rar. This includes the calendar and datagrid styles. The datagrid styles are not complete but are a good start. I hope if people build on these themes that they will post the changes here so everyone can benefit.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-04T07:44:02.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273062",
+    "ThreadId": "76461",
+    "Html": "<p>Thank you so much!</p>\r\n<p>but why rapidshare?? rapidshare sux.<br>I am unable to download, this is the message I get: Unfortunately right now our servers are overloaded and we have no more download slots left for non-members. Of course you can also try again later.</p>\r\n<p>Use <a href=\"http://www.mediafire.com/\">http://www.mediafire.com/</a>&nbsp;million times nicer, more reliable, free, and more, and no, I don't work for them..</p>",
+    "PostedDate": "2010-01-04T13:28:19.307-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273082",
+    "ThreadId": "76461",
+    "Html": "<p>I use rapidshare because I have a premium account with them. However here is mediafire link http://www.mediafire.com/file/zzzdnoonjqy/Skins.rar</p>",
+    "PostedDate": "2010-01-04T14:33:27.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273105",
+    "ThreadId": "76461",
+    "Html": "<p>I love you!</p>",
+    "PostedDate": "2010-01-04T15:23:15.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273118",
+    "ThreadId": "76461",
+    "Html": "<p>I am trying to see what's going on overthere, anyway there are references to an assembly called FutaTill which is not included in the package.<br>Could you please upload the entire project or give me a link to something?</p>\r\n<p>Did you write it?</p>\r\n<p>Man, I must tell you, you're good.</p>",
+    "PostedDate": "2010-01-04T16:26:22.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273261",
+    "ThreadId": "76461",
+    "Html": "<p>The FutaTill reference is in there due to the CurrencyTextBox style. Remove the futatill namespace declaration and also the CurrencyTextBox style. Or just copy the datagrid and calendar styles from my modified themes into the original ones downloaded from this site and make sure the namespaces match.</p>",
+    "PostedDate": "2010-01-05T04:36:06.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273833",
+    "ThreadId": "76461",
+    "Html": "<p>There has been a good few downloads of this, I'd be interested to hear what people think, or if anyones had any joy getting the visual states to work for selected item etc.</p>",
+    "PostedDate": "2010-01-06T08:11:46.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "274316",
+    "ThreadId": "76461",
+    "Html": "<p>I've had some success with the DataGridRow VisualStates by following the directions on this site http://blogs.msdn.com/vinsibal/archive/2008/11/04/wpf-vsm-and-datagrid-sample.aspx. Don't know why I need an extra class for the datagridrow visual states to&nbsp; work when the visual states in the other styles do not require one. This is only working on the UX musings skins however.</p>",
+    "PostedDate": "2010-01-07T06:37:28.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "274780",
+    "ThreadId": "76461",
+    "Html": "<p>Finally gave up and resorted to triggers. Either i'm missing something or vsm does not work correctly with the DataGrid yet.</p>\r\n<p>This works perfectly.</p>\r\n<p>&lt;ControlTemplate.Triggers&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger Property=&quot;IsMouseOver&quot; Value=&quot;true&quot;&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger.EnterActions&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;1&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/BeginStoryboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger.EnterActions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger Property=&quot;IsSelected&quot; Value=&quot;true&quot;&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger.EnterActions&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;.5&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/BeginStoryboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger.EnterActions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ControlTemplate.Triggers&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>This does not.</p>\r\n<p>&lt;vsm:VisualStateManager.VisualStateGroups&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualStateGroup x:Name=&quot;CommonStates&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualStateGroup.Transitions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualTransition GeneratedDuration=&quot;0&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualStateGroup.Transitions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualState x:Name=&quot;Normal&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualState x:Name=&quot;NormalAlternatingRow&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;0&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualState&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualState x:Name=&quot;MouseOver&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;1&quot; To=&quot;.25&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualState&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualState x:Name=&quot;NormalSelected&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;.5&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualState&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualState x:Name=&quot;MouseOverSelected&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;.5&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualState&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;vsm:VisualState x:Name=&quot;UnfocusedSelected&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;.15&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualState&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualStateGroup&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/vsm:VisualStateManager.VisualStateGroups&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>EDIT: forgot the exit actions, Use this for bubble creme, place inside Controltemplate</p>\r\n<p>&lt;ControlTemplate.Triggers&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger Property=&quot;IsSelected&quot; Value=&quot;true&quot;&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger.EnterActions&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;1&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/BeginStoryboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger.EnterActions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger.ExitActions&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &lt;BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimation Storyboard.TargetName=&quot;PART_BackgroundRectangle&quot; Storyboard.TargetProperty=&quot;Opacity&quot; Duration=&quot;0&quot; To=&quot;0&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger.ExitActions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ControlTemplate.Triggers&gt;</p>",
+    "PostedDate": "2010-01-08T06:49:36.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280302",
+    "ThreadId": "76461",
+    "Html": "<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\"><br></span></pre>\r\n</div>\r\n<p>Nobster, big thanks for the work on this.</p>\r\n<p>Question: I'm using the ExpressionDark theme and I wanted to remove the horizontal and vertical lines. I was successful at removing the horizontal lines, but I can't seem to get rid of the vertical lines... I've spent quite awhile in the xaml and can't figure it out.... any advice or suggestions?</p>\r\n<p>&nbsp;</p>\r\n<p>I've tried changing these values with no success:</p>\r\n<pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Setter</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">GridLinesVisibility</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">None</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span><br><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Setter</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">HorizontalGridLinesBrush</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">Transparent</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span><br><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Setter</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">IsTabStop</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">True</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span><br><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Setter</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">VerticalGridLinesBrush</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">Black</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span><br><br></pre>",
+    "PostedDate": "2010-01-21T16:05:12.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280466",
+    "ThreadId": "76461",
+    "Html": "<p>The GridLinesVisibility should be set to &quot;None&quot; like you have done but additionally you will need to comment out this line</p>\r\n<p>&lt;Rectangle Height=&quot;1&quot; HorizontalAlignment=&quot;Stretch&quot; x:Name=&quot;BottomGridLine&quot; Grid.Column=&quot;1&quot; Grid.Row=&quot;2&quot; Fill=&quot;White&quot; /&gt;</p>\r\n<p>from the DataGridRow style.</p>\r\n<p>&nbsp;</p>\r\n<p>While your at it add this to the control template for the DataGridRow as well for nice row select effect.</p>\r\n<p>&nbsp;</p>\r\n<p>&lt;ControlTemplate.Triggers&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger Property=&quot;IsSelected&quot; Value=&quot;true&quot;&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger.EnterActions&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimationUsingKeyFrames BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.0010000&quot; Storyboard.TargetName=&quot;SelectedRectangle&quot; Storyboard.TargetProperty=&quot;(UIElement.Opacity)&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SplineDoubleKeyFrame KeyTime=&quot;00:00:00&quot; Value=&quot;1&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DoubleAnimationUsingKeyFrames&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/BeginStoryboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger.EnterActions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger.ExitActions&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &lt;BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Storyboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DoubleAnimationUsingKeyFrames BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.0010000&quot; Storyboard.TargetName=&quot;SelectedRectangle&quot; Storyboard.TargetProperty=&quot;(UIElement.Opacity)&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;SplineDoubleKeyFrame KeyTime=&quot;00:00:00&quot; Value=&quot;0&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DoubleAnimationUsingKeyFrames&gt;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Storyboard&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/BeginStoryboard&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger.ExitActions&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ControlTemplate.Triggers&gt;</p>",
+    "PostedDate": "2010-01-22T02:08:06.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280638",
+    "ThreadId": "76461",
+    "Html": "<p>Cheers Nobster, thanks for the fast reply.... that line you suggested is how I got rid of the horizontal lines, but I still have these blasted white dashed vertical lines running down for each column that I can't seem to find. :-(</p>\r\n<p>&nbsp;</p>\r\n<p>Awesome row select effect... I put my own in, but I like yours much better so I got it in.</p>",
+    "PostedDate": "2010-01-22T09:20:41.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280652",
+    "ThreadId": "76461",
+    "Html": "<p>I'll take another look at it this evening but setting GridLinesVisibility to None in the DataGrid style and commenting out the BottomGridLine rectangle in the DataGridRow style&nbsp; should have removed both of the grid lines.</p>",
+    "PostedDate": "2010-01-22T09:42:57.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280668",
+    "ThreadId": "76461",
+    "Html": "<p>Thanks mate...</p>\r\n<p>I went back and restored the file to your original format and put in just your changes... just in case I inadvertently changed something causing my problem, but the lines are still there. It'll be interesting to see what you find out... thanks for you time.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-22T10:27:29.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280754",
+    "ThreadId": "76461",
+    "Html": "<p>Try this http://www.mediafire.com/file/d5ngimtlqvm/ExpressionDark2.xaml</p>\r\n<p>I only changed the two things and it works for me, so my only guess is there is something different elsewhere in the skin. Maybe I changed something since the first upload, anyway give this a go. Also might sound silly, but make sure your not setting the datagrid GridLinesVisibility property in your code or window xaml which is overriding the behaviour of the theme.</p>",
+    "PostedDate": "2010-01-22T14:27:13.95-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "281482",
+    "ThreadId": "76461",
+    "Html": "<p>Nobster, thanks for you time (and sorry for wasting your time)</p>\r\n<p>Turned out it was my fault. After setting up some test projects with your suggestions it worked as expected. I swear I checked my grid xaml again and again to make sure I wasn't overriding something... but after a fresh night of sleep and clear mind... I found it this morning and sure enough I was overriding it. I'm going to blame it on VS2010 beta 2 lol.</p>\r\n<p>Thanks again!</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-25T09:21:57.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "281578",
+    "ThreadId": "76461",
+    "Html": "<p>No problem, glad to help</p>",
+    "PostedDate": "2010-01-25T14:02:31.843-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283994",
+    "ThreadId": "76461",
+    "Html": "<p>Hi Nobster,</p>\r\n<p>thank you for this excellent piece of work!</p>\r\n<p>I noticed that the DataGrid doesn't have a trigger that changes the background color of the selected row.</p>\r\n<p>I added such a trigger in the controls:DataGridCell&nbsp;ControlTemplate using the SelectedBackgroundBrush as trigger color. This works fine but the black foreground color is hardly readable on top of the SelectedBackgroundBrush.</p>\r\n<p>My question is: How (or where) can I also trigger the foreground color so that the font text in the selected row becomes black? controls:DataGridCell does not have a property for &quot;foreground&quot;.&nbsp;</p>\r\n<p>Thanks in advance!</p>",
+    "PostedDate": "2010-01-31T12:19:22.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "284255",
+    "ThreadId": "76461",
+    "Html": "<p>Do you mean row select effect or current editing cell effect as the file above at http://www.mediafire.com/file/d5ngimtlqvm/ExpressionDark2.xaml should have the triggers in place for a nice row select effect and also the foreground color switch.</p>\r\n<p>The trigger for the row select is on the DataGridRow rather then the DataGridCell.</p>\r\n<p>To be honest by only glancing at the theme I'm not sure how the foreground color switch is actually achieved. Its something do with that fact that the DataGridCell inherits from ContentControl, anyway it works.</p>",
+    "PostedDate": "2010-02-01T06:38:06.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "284461",
+    "ThreadId": "76461",
+    "Html": "<p>Thanks, I got it to work.</p>\r\n<p>Today I found a nasty bug (which many themes seem to have):</p>\r\n<p>If you databind a boolen value to a checkbox, the checkbox is <strong>never </strong>checked initially. Instead one has to click twice on the checkbox to see the checked mark. This happens because the IsChecked storyboard in the theme only triggers if the IsChecked property changes from false to true which doesn't happen when databinding.</p>\r\n<p>There is an easy fix for this though: Just invert the trigger by triggering on IsChecked Value=&quot;true&quot; and switching the enter/exit actions!</p>\r\n<p>Change</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;!--&lt;Trigger Property=&quot;IsChecked&quot; Value=&quot;false&quot;&gt;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;Trigger.ExitActions&gt;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;BeginStoryboard Storyboard=&quot;{StaticResource CheckedTrue}&quot; x:Name=&quot;CheckedTrue_BeginStoryboard&lt;/Trigger.ExitActions&gt;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;Trigger.EnterActions&gt;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;BeginStoryboard Storyboard=&quot;{StaticResource CheckedFalse}&quot;/&gt;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;/Trigger.EnterActions&gt;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\"><span style=\"white-space:pre\"> </span>&lt;/Trigger&gt;--</div>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><div style=\"color:Black;background-color:White\"><pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Trigger</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">IsChecked</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">false</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Trigger.ExitActions</span><span style=\"color:Blue\">&gt;</span>\r\n\t\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">BeginStoryboard</span> <span style=\"color:Red\">Storyboard</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{StaticResource CheckedTrue}</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">x:Name</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">CheckedTrue_BeginStoryboard</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">/&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Trigger.ExitActions</span><span style=\"color:Blue\">&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Trigger.EnterActions</span><span style=\"color:Blue\">&gt;</span>\r\n\t\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">BeginStoryboard</span> <span style=\"color:Red\">Storyboard</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{StaticResource CheckedFalse}</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">/&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Trigger.EnterActions</span><span style=\"color:Blue\">&gt;</span>\r\n<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Trigger</span><span style=\"color:Blue\">&gt;</span></pre>\r\n</div>\r\n</pre>\r\n</div>\r\n<p>To:</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Trigger</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">IsChecked</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">true</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Trigger.EnterActions</span><span style=\"color:Blue\">&gt;</span>\r\n\t\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">BeginStoryboard</span> <span style=\"color:Red\">Storyboard</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{StaticResource CheckedTrue}</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">x:Name</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">CheckedTrue_BeginStoryboard</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">/&gt;</span>\t\t\t\t\t\t\t\t\r\n\t<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Trigger.EnterActions</span><span style=\"color:Blue\">&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Trigger.ExitActions</span><span style=\"color:Blue\">&gt;</span>\r\n\t\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">BeginStoryboard</span> <span style=\"color:Red\">Storyboard</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{StaticResource CheckedFalse}</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">/&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Trigger.ExitActions</span><span style=\"color:Blue\">&gt;</span>\r\n<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Trigger</span><span style=\"color:Blue\">&gt;</span></pre>\r\n</div>\r\n<p>This happens to radiobuttons, too! Just replace&nbsp;<span style=\"font-family:Consolas, 'Courier New', Courier, monospace;color:#0000ff;white-space:pre\">CheckedTrue <span style=\"color:#000000\">with </span>CheckedOn <span style=\"color:#000000\">and </span>CheckedFalse <span style=\"color:#000000\">with </span>CheckedOff </span><span style=\"white-space:pre\"><span style=\"color:#000000\">there.</span></span></p>\r\n<p>More information on&nbsp;<a href=\"http://wpf.codeplex.com/Thread/View.aspx?ThreadId=58152\">http://wpf.codeplex.com/Thread/View.aspx?ThreadId=58152</a>&nbsp;and thanks to&nbsp;<span style=\"font-size:14px;color:#30332d;white-space:nowrap\">pspidey who fixed it.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size:14px;color:#30332d;white-space:nowrap\">Maybe you could add this fix to your solution, Nobster...</span></p>",
+    "PostedDate": "2010-02-01T16:09:25.85-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "287133",
+    "ThreadId": "76461",
+    "Html": "<p>Thanks for sharing DragothiC, rather then creating an additional trigger you could just set the initial value of the object effected by the storyboard.</p>\r\n<p>For example if the CheckedTrue storyboard changed the opacity of a border to 1, then set this as the starting opacity of that border in the control template.</p>\r\n<p>Saves creating two triggers if the storyboard animation was very simple.</p>\r\n<p>Also I guess this wouldn't even be an issue if using VisualStates rather then triggers.</p>",
+    "PostedDate": "2010-02-08T06:15:27.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "445954",
+    "ThreadId": "76461",
+    "Html": "Thank you so much for the DataGrid theme, Nobster.\r\nCould you please give me a favor by reupload the skins.rar included the fix for cell selecting and editing of DataGrid ? \r\nBeside that, when I apply TwilightBlue I see font of DataGrid become larger than pre-setting ( I set font size of DataGrid is 14 but it seems larger than my setting).\r\nSorry for bother you.",
+    "PostedDate": "2010-05-21T11:10:11.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446543",
+    "ThreadId": "76461",
+    "Html": "<p>The download link is still active rfc_club, but I haven't done any additional work on the themes I'm afraid and unfortunately I'm tied up with other projects at the moment.</p>\r\n<p>For the Twightlight blue</p>\r\n<p>There's a few properties set by the style, including row height and font size but these should be overidden with your settings, so I'm not sure whats happening here.</p>\r\n<p>Below is a section of the DataGrid style extracted from the theme file. If you can find this section in your file, maybe go through each of the Setter Properties to</p>\r\n<p>see if one of them is causing the anomoly.</p>\r\n<p>&nbsp;&lt;!--DataGrid--&gt;<br>&nbsp;&nbsp;&nbsp; &lt;Style TargetType=&quot;controls:DataGrid&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;RowBackground&quot; Value=&quot;#FFFFFF&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;AlternatingRowBackground&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;LinearGradientBrush EndPoint=&quot;1,1&quot; StartPoint=&quot;0,0&quot; SpreadMethod=&quot;Repeat&quot; MappingMode=&quot;Absolute&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GradientStop Color=&quot;#FFFFFF&quot; Offset=&quot;.33&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GradientStop Color=&quot;{StaticResource SecondaryColor}&quot; Offset=&quot;1&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/LinearGradientBrush&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Setter.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Setter&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;Foreground&quot; Value=&quot;{StaticResource TextBrush}&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;Background&quot; Value=&quot;{StaticResource WindowBackgroundBrush}&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;HeadersVisibility&quot; Value=&quot;All&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;HorizontalScrollBarVisibility&quot; Value=&quot;Auto&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;HorizontalGridLinesBrush&quot; Value=&quot;{StaticResource SecondaryBrush}&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;VerticalScrollBarVisibility&quot; Value=&quot;Auto&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;VerticalGridLinesBrush&quot; Value=&quot;{StaticResource SecondaryBrush}&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;SelectionMode&quot; Value=&quot;Extended&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;CanUserReorderColumns&quot; Value=&quot;False&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;ScrollViewer.CanContentScroll&quot; Value=&quot;True&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;RowHeight&quot; Value = &quot;30&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;CanUserResizeColumns&quot; Value=&quot;True&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;CanUserSortColumns&quot; Value=&quot;True&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;AutoGenerateColumns&quot; Value=&quot;True&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;RowDetailsVisibilityMode&quot; Value=&quot;VisibleWhenSelected&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;BorderBrush&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;LinearGradientBrush StartPoint=&quot;0.5,0&quot; EndPoint=&quot;0.5,1.65&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GradientStop Color=&quot;{StaticResource PrimaryColor}&quot; Offset=&quot;.25&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;GradientStop Color=&quot;{StaticResource SecondaryColor}&quot; Offset=&quot;1&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/LinearGradientBrush&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Setter.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Setter&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;BorderThickness&quot; Value=&quot;1&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;DragIndicatorStyle&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Style TargetType=&quot;ContentControl&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;FontSize&quot; Value=&quot;10.5&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;FontWeight&quot; Value=&quot;Bold&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;Foreground&quot; Value=&quot;#7FFFFFFF&quot; /&gt;</p>",
+    "PostedDate": "2010-05-24T01:34:04.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "457695",
+    "ThreadId": "76461",
+    "Html": "<p>Anything new abut the theming issue with DataGrid for the .Net 4.0 release (inside VS2010)?</p>\r\n<p>The WPF Toolkit stuff seems to work a bit different from the WPF release wersion.</p>",
+    "PostedDate": "2010-06-20T01:49:33.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "481552",
+    "ThreadId": "76461",
+    "Html": "I put up a small project that has some DataGrid themes as found in the Silverlight Toolkit. \r\n\r\nhttp://datagridthemessl.codeplex.com/",
+    "PostedDate": "2010-08-17T12:47:58.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "483521",
+    "ThreadId": "76461",
+    "Html": "<p>Hi,&nbsp;</p>\r\n<p>I'm using the DataGrid and it works great... just having having trouble aligning DataGridColumnHeader&rsquo;s to Center&hellip;</p>\r\n<p>Be grateful for any help&hellip;</p>\r\n<p>btw - &nbsp;i'm using the TwilghtBluetheme</p>",
+    "PostedDate": "2010-08-23T03:19:29.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "505277",
+    "ThreadId": "76461",
+    "Html": "<p>Hi,</p>\r\n<p>How can I modify the colour of the separator on the column headers of the DataGrid???</p>\r\n<p>Thanks in advance.</p>",
+    "PostedDate": "2010-10-11T02:45:29.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "704002",
+    "ThreadId": "76461",
+    "Html": "<p>Hi&nbsp;<a class=\"UserProfileLink\" href=\"http://www.codeplex.com/site/users/view/TWebster\">TWebster</a>,</p>\r\n<p>I used your code. I found some difficulties. Could you help me to fix it.</p>\r\n<p>When I use combo box, check box in the datagrid,selected row backgroud color still unchanged even i move to another row.&nbsp;</p>\r\n<p>how can i fix this?</p>\r\n<p>thanks,</p>\r\n<p>thenndral.</p>",
+    "PostedDate": "2011-11-27T22:12:32.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

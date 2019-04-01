@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This is not technically a bug, but it is a usability problem.\n \nThe way the BureauBlue (and I assume other) themes currently work for toggle buttons, you can't see the state of the button when the mouse is over the button. It looks exactly the same whether the button is checked or unchecked. This makes it harder to use the toggle button than it could be.\n \nTo correct this, I suggest replacing the HoverOn and HoverOff storyboards with HoverCheckedOn, HoverCheckedOff, HoverUncheckedOn, HoverUncheckedOff storyboards, then using MultiTriggers that test for each combination of IsMouseOver and IsChecked.\n \nCheck out the way way toggle buttons work in the Microsoft Office ribbon for an example of how it should be done.",
+    "LastUpdatedDate": "2013-02-21T17:10:01.163-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-10-30T00:52:41.23-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Can't tell state of ToggleButton when mouse is over button",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6070
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

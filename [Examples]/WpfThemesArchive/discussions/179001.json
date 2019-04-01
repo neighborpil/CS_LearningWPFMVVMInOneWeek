@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "387266",
+    "ThreadId": "179001",
+    "Html": "<p>Has anyone been able to force a theme (e.g. Luna.Metallic.xaml) to the DatePicker control ? Mind showing me how or point out what I've done wrong?</p>\r\n<p>I've downloaded the Feb 2010 release of the WPFToolkit.msi, and was able to apply theme to the DataGrid but unfortunately not to the DatePicker. Segments of my codes are provided below.<br><br>Thanks in Advance.</p>\r\n<p>----------<br><br><strong>[App.xaml]<br></strong><br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; &lt;Application.Resources&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary.MergedDictionaries&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary Source=&quot;/PresentationFramework.Luna, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, ProcessorArchitecture=MSIL;component/themes/Luna.Metallic.xaml&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary Source=&quot;pack://application:,,,/WPFToolkit;component/Themes/Luna.Metallic.xaml&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ResourceDictionary.MergedDictionaries&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ResourceDictionary&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/Application.Resources&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;<br><br><strong>[Window1.xaml]<br></strong><br>&nbsp;&nbsp; &nbsp;...<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;wpf:DatePicker Margin=&quot;3&quot; SelectedDate=&quot;2/25/2010&quot; Width=&quot;Auto&quot; /&gt;<br>&nbsp;&nbsp; &nbsp;...</p>",
+    "PostedDate": "2010-02-24T20:50:10.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

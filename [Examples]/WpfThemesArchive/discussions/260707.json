@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "625105",
+    "ThreadId": "260707",
+    "Html": "\r\n<p>While using these themes in one of my projects I discovered that click on the scroll up or down button in popup of combo box closes the ComboBox popup.</p>\r\n<p>I also found the solution for this problem and the solution lies in the ScrollBar's template where increase and decrease repeat buttons are defined.&nbsp;</p>\r\n<p><strong>Focusable=&quot;False&quot; &nbsp;IsTabStop=&quot;False&quot;</strong> are the attributes missing from these buttons which leads popup to close.</p>\r\n<p>So just add these attributes to the&nbsp;<strong>IncreaseRepeat </strong>and&nbsp;<strong>DecreaseRepeat\r\n</strong>buttons and problem is solved.</p>\r\n<p>If this is already discovered then just ignore.</p>\r\n",
+    "PostedDate": "2011-06-08T20:17:13.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

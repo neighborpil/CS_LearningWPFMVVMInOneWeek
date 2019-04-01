@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I enable a BureauBlue button that was disabled, its appearance does not change back. I notice a trigger for IsEnabled = true, but it's empty. Shouldn't there be something there? I'm not sure how to set it back.",
+    "LastUpdatedDate": "2014-03-22T02:49:04.913-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2012-04-04T15:05:42.26-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "BureauBlue button once disabled dose not change appearance",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 12002
+  },
+  "FileAttachments": [
+    {
+      "FileId": 7883,
+      "FileName": "Capture.JPG",
+      "DownloadUrl": ".\\7883"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Yes.. I also have observed the same issue.",
+      "PostedDate": "2014-03-22T02:49:04.913-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

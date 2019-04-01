@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have noticed that when I use the WPF WhistlerBlue theme, the bottom letters like g,j,q are hidden in textboxes and only the top part of those letters is visible. This means the \"j\" looks like \"i\".\n\nThis is the code I am using:\n<TextBox Height=\"23\" Name=\"NumberTextBox\" MaxLength=\"100\" Width=\"120\" Canvas.Left=\"663\" Canvas.Top=\"40\" />\n\nWhat can I do to resolve this? I do not want to make the text boxes any higher as they will be too high.\n\nThanks.",
+    "LastUpdatedDate": "2013-12-17T03:36:34.477-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2013-12-17T03:36:32.76-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WhistlerBlue textbox bottom half of letters hidden",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 13108
+  },
+  "FileAttachments": [
+    {
+      "FileId": 7832,
+      "FileName": "Untitled.png",
+      "DownloadUrl": ".\\7832"
+    }
+  ],
+  "Comments": []
+}

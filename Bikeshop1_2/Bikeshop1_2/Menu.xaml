@@ -6,10 +6,28 @@
       xmlns:local="clr-namespace:Bikeshop1_2"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="500"
-      Title="Menu">
-
+      Title="Menu"
+      Background="{StaticResource background}">
+    
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="#AA000000" Margin="10, 10, 0, 0" />
+                            <Ellipse Fill="{TemplateBinding Background}" Margin="5, 5, 15, 15" />
+                            <Viewbox Margin="5, 5, 15, 15">
+                                <ContentPresenter />
+                            </Viewbox>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
-        <Button Content="Products" HorizontalAlignment="Left" Margin="70,151,0,0" VerticalAlignment="Top" Width="92" Height="67"/>
+        <Button Content="Products" HorizontalAlignment="Left" Margin="70,151,0,0" VerticalAlignment="Top" Width="92" Height="67" Click="Button_Click_1"/>
         <Button x:Name="btnLiveSupport" Content="Live support" HorizontalAlignment="Left" Margin="193,151,0,0" VerticalAlignment="Top" Width="92" Height="67" Click="BtnLiveSupport_Click"/>
         <Button Content="Email support" HorizontalAlignment="Left" Margin="316,151,0,0" VerticalAlignment="Top" Width="92" Height="67" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="70,278,0,0" TextWrapping="Wrap" Text="Adventure works" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontStyle="Italic"/>

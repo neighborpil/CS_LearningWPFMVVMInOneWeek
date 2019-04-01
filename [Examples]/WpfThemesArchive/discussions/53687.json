@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "180748",
+    "ThreadId": "53687",
+    "Html": "I got the following message:<br>\r\nError   The tag 'VisualStateManager.VisualStateGroups' does not exist in XML namespace 'clr-namespace:System.Windows;assembly=WPFToolkit'. Line 67 Position 26. C:\\Download\\IT\\WPF\\ex12\\WPF.Themes\\BubbleCreme\\Theme.xaml 67 26 WPF.Themes<br>\r\n<br>\r\nMy WPFToolkit version is 3.5.31016.1 and I am using VS 2008 Express Edition <br>\r\n<br>\r\n<br>\r\nThanks!<br>\r\n",
+    "PostedDate": "2009-04-17T20:59:14.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

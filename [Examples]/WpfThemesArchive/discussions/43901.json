@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "145986",
+    "ThreadId": "43901",
+    "Html": "Are there any plans on supporting Editable combo boxes? I haven't been able to get any of the themes to work with Editable ComboBoxes.<br>\r\n<br>\r\nOn a side note I've noticed setting the IsEnabled property to true does not provide a consisten look with other controls.\r\n",
+    "PostedDate": "2009-01-10T15:35:30.613-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "158875",
+    "ThreadId": "43901",
+    "Html": "I'm also looking forward to the support for Editable combo boxes. Does anyone know any workarounds?<br>\r\n",
+    "PostedDate": "2009-02-18T01:25:07.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

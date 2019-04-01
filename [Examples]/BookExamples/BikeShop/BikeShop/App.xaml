@@ -1,0 +1,14 @@
+﻿<Application x:Class="BikeShop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BikeShop"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="background">
+            <GradientStop Color="#FFDBFFE7"
+                          Offset="0" />
+            <GradientStop Color="#FF03882D"
+                          Offset="1" />
+        </LinearGradientBrush>
+    </Application.Resources>
+</Application>

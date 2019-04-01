@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "225383",
+    "ThreadId": "66345",
+    "Html": "<p>Just wondering is this project being maintained. It states on the home page that there would be tab control support by Q1 and DataGrid support later, are these updates underway or will there only be support on certain skins? I attempted the tab control and datagrid support myself for UXMusings Red by taking the app.xaml from the RedSkin project downloaded from corina's blog and fixing the errors. However the controls don't show at all then. Any updates, news or help would be appreciated.</p>\r\n<p>Regards Norbert</p>",
+    "PostedDate": "2009-08-19T05:31:13.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "238713",
+    "ThreadId": "66345",
+    "Html": "<p>Sorry for the long delay in updating the themes... I will be addressing all the issues in the next couple of weeks!</p>\r\n<p>Rudi</p>",
+    "PostedDate": "2009-09-25T03:04:29.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "238755",
+    "ThreadId": "66345",
+    "Html": "<p>Cheers Rudi</p>",
+    "PostedDate": "2009-09-25T05:44:26.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

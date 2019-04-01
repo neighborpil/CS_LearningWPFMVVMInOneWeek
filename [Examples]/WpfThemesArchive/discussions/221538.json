@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "473088",
+    "ThreadId": "221538",
+    "Html": "<p>Hi,</p>\r\n<p>I was using these themes in my application and they were working just fine, but I converted my project into VS 2010 and now I get an exception trying to apply any theme. &nbsp;(<span style=\"text-decoration:underline\">XamlParseException</span>:&nbsp;System.Windows.Baml2006.TypeConverterMarkupExtension)</p>\r\n<p>Does anybody knows why is this happening or how to solve the problem?</p>\r\n<p>Thanks in advance!</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-27T03:11:26.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473102",
+    "ThreadId": "221538",
+    "Html": "<p>Does it make a difference if you change the target framework in your project properties from 4 back to 3.5?</p>",
+    "PostedDate": "2010-07-27T03:36:04.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473128",
+    "ThreadId": "221538",
+    "Html": "<p>I can't do that!&nbsp;I've changed &quot;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.0&quot; for &quot;supportedRuntime version=&quot;v3.5&quot; sku=&quot;.NETFramework,Version=v3.5&quot; in my app.config and I can't even run the project. I'll have to try something else...</p>\r\n<p>But thanks anyway!</p>",
+    "PostedDate": "2010-07-27T04:37:52.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473212",
+    "ThreadId": "221538",
+    "Html": "I'm using these themes successfully through a vs2010 project with a target framework of 3.5. Can you explain why you can't?",
+    "PostedDate": "2010-07-27T07:35:42.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473569",
+    "ThreadId": "221538",
+    "Html": "<p>I don't know why I can't change the supportedRuntime version, but it doesn't matter. Nothing to do with the VS2010. It's not because I converted the project to 2010 but because I changed the way I'm calling to the function ApplyTheme.</p>\r\n<p>The sample application always uses ApplyTheme(this ContentControl control, string theme) to apply the theme and never uses&nbsp;ApplyTheme(this Application app, string theme).</p>\r\n<p>The problem is that I'm always using the ApplyTheme(Application,theme) because I'm not using the ComboboxSelectedItemChanged to apply the theme, I'm using a button with a command and a command parameter(theme) and because I need to apply the theme to all my application.</p>\r\n<p>&nbsp;</p>\r\n<p>The button calls to a function like that:</p>\r\n<p>&nbsp;&nbsp; &nbsp;private void AplicaTheme(object theme)<br>&nbsp;&nbsp; &nbsp;{<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;try<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Application.Current.ApplyTheme(theme.ToString());<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;catch (Exception ex)<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MessageBox.Show(ex.Message);<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}<br>&nbsp;&nbsp; &nbsp;}</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>PS- Thanks again Nobster and excuse me for my broken english!</p>",
+    "PostedDate": "2010-07-28T02:25:58.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473575",
+    "ThreadId": "221538",
+    "Html": "<p>Okay so you've created an extension method &quot;ApplyTheme&quot; to apply the styles globally. This shouldn't really make a difference, and the error &quot;XamlParseException&quot; would indicate its an issue in the raw xaml anyway. Have you made changes to the xaml? What is the body of the ApplyTheme method. I use the following code, where filename is the path to the theme file to load e.g &quot;C:\\ExpressionDark.xaml&quot;</p>\r\n<p>//Initialize Resource Directory.<br>ResourceDictionary skin = new ResourceDictionary();</p>\r\n<p>&nbsp;//Set new source.<br>skin.Source = new Uri(filename, UriKind.Absolute);<br><br>&nbsp;//Merge.<br>App.Current.Resources.MergedDictionaries.Add(skin);</p>",
+    "PostedDate": "2010-07-28T02:42:55.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473651",
+    "ThreadId": "221538",
+    "Html": "<p>Thank you very much!!!</p>\r\n<p>Now Is working perfectly!!! Good job!!!</p>\r\n<p>Thanks again!!!</p>",
+    "PostedDate": "2010-07-28T05:43:41.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

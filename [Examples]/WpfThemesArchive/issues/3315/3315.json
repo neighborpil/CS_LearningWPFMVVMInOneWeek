@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Get the following exception when I use Content structure ( <Button.Content>..... ) for Button control.  NOTE: It will work with Dave Glossy theme.\n \nCannot animate the 'Data' property on a 'System.Windows.Shapes.Path' using a 'System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames'. For details see the inner exception.",
+    "LastUpdatedDate": "2013-02-21T17:10:04.957-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-11-17T13:11:23.783-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Button with Button.Content Structure",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3315
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "My bad.  I had Buttons inside an Expander control.  Still not sure why Dave Glossy would work, though.",
+      "PostedDate": "2008-11-17T13:29:12.127-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Can you paste some sample xaml to reproduce the error?",
+      "PostedDate": "2008-11-24T00:34:20.277-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:04.957-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

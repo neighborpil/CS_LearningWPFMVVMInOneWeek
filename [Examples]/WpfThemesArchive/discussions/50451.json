@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "169087",
+    "ThreadId": "50451",
+    "Html": "Hi,<br>\r\n<br>\r\nI found that if I apply basic validations(like required field) via style/trigger, it clears theme effect for the control.<br>\r\nI am using Dave's glossy controls theme and I want to validate a textbox on the screen. I am not using any databinding. <br>\r\nI want to implement simple required field validation.<br>\r\n<br>\r\nAny ideas how I can do this without loosing any effect on theme?<br>\r\n<br>\r\nThanks,<br>\r\nMahesh. \r\n",
+    "PostedDate": "2009-03-17T09:49:03.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

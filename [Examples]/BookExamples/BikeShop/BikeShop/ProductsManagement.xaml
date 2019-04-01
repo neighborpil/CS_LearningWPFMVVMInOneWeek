@@ -1,0 +1,54 @@
+﻿<Page x:Class="BikeShop.ProductsManagement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:BikeShop"
+      mc:Ignorable="d"
+      d:DesignHeight="328.286"
+      d:DesignWidth="454.286"
+      Background="{StaticResource background}"
+      Title="ProductsManagement">
+
+    <Grid>
+        <TextBox x:Name="textBox"
+                 Height="23"
+                 Margin="59,10,113.222,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Background="#99FFFFFF"
+                 TextChanged="textBox_TextChanged" />
+        <TextBlock x:Name="textBlock"
+                   HorizontalAlignment="Left"
+                   Margin="10,11,0,0"
+                   TextWrapping="Wrap"
+                   Text="Search:"
+                   VerticalAlignment="Top" />
+        <DataGrid x:Name="dataGrid"
+                  Margin="10,60,191.222,10.444" />
+        <Border Margin="0,60,10.222,10.444"
+                DataContext="{Binding SelectedItem, ElementName=dataGrid}"
+                HorizontalAlignment="Right"
+                Width="162"
+                Background="#66FFFFFF">
+            <StackPanel Margin="10">
+                <TextBlock Text="Product details"
+                           FontWeight="Bold"
+                           FontSize="16"
+                           HorizontalAlignment="Center"
+                           Margin="10" />
+                <TextBlock Text="Title" />
+                <TextBox Text="{Binding Title, Mode=TwoWay}" />
+                <TextBlock Text="Price" />
+                <TextBox Text="{Binding Price, Mode=TwoWay}" />
+                <TextBlock Text="Color" />
+                <TextBox Text="{Binding Color, Mode=TwoWay}" />
+                <Border Background="{Binding Color}"
+                        Height="10" />
+                <TextBlock Text="Reference" />
+                <TextBox Text="{Binding Reference, Mode=TwoWay}" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Page>

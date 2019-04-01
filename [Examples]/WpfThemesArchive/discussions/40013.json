@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "132821",
+    "ThreadId": "40013",
+    "Html": "Is there any way you can release a tutorial and/or show links on how to use the WPF themes in a WPF app?  Having trouble trying to set up.  Demo would be great.  Thanks.\r\n",
+    "PostedDate": "2008-11-15T10:08:10.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133035",
+    "ThreadId": "40013",
+    "Html": "Here is a post about how to use the themes... Also have a look at the included demo! If you need more info, please let me know and I will create a more detailed tutorial<br>\r\n<br>\r\n<a href=\"http://dotnet.org.za/rudi/archive/2008/11/07/wpf-themes-update.aspx\">http://dotnet.org.za/rudi/archive/2008/11/07/wpf-themes-update.aspx</a><br>\r\n",
+    "PostedDate": "2008-11-17T02:26:00.237-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133129",
+    "ThreadId": "40013",
+    "Html": "I actually found the demo last night.  Tried it today and works great.  Do the WPF Themes work with Pages, PageFunctions, and UserControls?  Or only for Windows for now?  Thanks and keep up good work.\r\n",
+    "PostedDate": "2008-11-17T07:42:56.547-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133210",
+    "ThreadId": "40013",
+    "Html": "I noticed some controls do not work with the themes ( Password, TextBlock, etc. ).  I'm mainly using the DaveGlossy theme.  Are there any docs on how to connect more controls to themes?  I also noticed that some third-party controls change when using the themes?  Is there a way to turn off the themes for specific controls in a WPF app?  Thanks.\r\n",
+    "PostedDate": "2008-11-17T11:07:12.84-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133310",
+    "ThreadId": "40013",
+    "Html": "Hi Shaggygi, <br>\r\n<br>\r\nThank you for all your valuable input!!! The themes will work with Pages, PageFunctions &amp; UserControls... Just don't use the attached property... Use the Application extension method (Read more <a href=\"http://dotnet.org.za/rudi/archive/2008/11/07/wpf-themes-update.aspx\">here</a>)<br>\r\n<br>\r\nYou are current, currently Password, TextBlock, DatePicker, Calendar, etc is not supported yet! I tried to get all the &quot;normal&quot; wpf controls in first! Have a look at the home page, their is a list of supported and planned control support! I just added the Expander control!<br>\r\n<br>\r\nKeep up the great feedback!<br>\r\n<br>\r\nRudi\r\n",
+    "PostedDate": "2008-11-17T22:15:59.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

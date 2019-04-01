@@ -1,0 +1,214 @@
+[
+  {
+    "Id": 3117,
+    "Title": "Cannot compile"
+  },
+  {
+    "Id": 3118,
+    "Title": "Progressbar IsIndeterminate=true does not work"
+  },
+  {
+    "Id": 3315,
+    "Title": "Button with Button.Content Structure"
+  },
+  {
+    "Id": 3317,
+    "Title": "ComboBox/TextBox Scrollbars"
+  },
+  {
+    "Id": 3318,
+    "Title": "Expander Not Visible"
+  },
+  {
+    "Id": 3365,
+    "Title": "ComboBox did not collapse"
+  },
+  {
+    "Id": 3491,
+    "Title": "Button Content with _ not displaying as expected."
+  },
+  {
+    "Id": 3498,
+    "Title": "Add support for TextBlock"
+  },
+  {
+    "Id": 3503,
+    "Title": "WindowBackgroundBrush (ExpressionDark) doesn't match Expression"
+  },
+  {
+    "Id": 3509,
+    "Title": "Slider - Orientation=\"Vertical\""
+  },
+  {
+    "Id": 3510,
+    "Title": "Tab Control does not display correctly when Expression Dark selected."
+  },
+  {
+    "Id": 3775,
+    "Title": "Tab Item ContentAlignment and Padding"
+  },
+  {
+    "Id": 4054,
+    "Title": "VisualStateManager does not work for many of the styles"
+  },
+  {
+    "Id": 4083,
+    "Title": "WhistlerBlue ScrollBar"
+  },
+  {
+    "Id": 4106,
+    "Title": "ListBoxItem in DavesGlossyControls prevents clicking on Hyperlink inlines"
+  },
+  {
+    "Id": 4111,
+    "Title": "Cursor/Caret not visible in TextBox controls in DavesGlossyControls"
+  },
+  {
+    "Id": 4358,
+    "Title": "BureauBlue theme not displaying DisplayMemberPath when dropdown is open"
+  },
+  {
+    "Id": 4612,
+    "Title": "Buggy Horizontal Scrollbars in Several Themes"
+  },
+  {
+    "Id": 5231,
+    "Title": "Content alignment does not work for ListBox (it's items)"
+  },
+  {
+    "Id": 5341,
+    "Title": "Easy fix: WhistlerBlue ComboBoxToggleButton only works when clicking on arrow."
+  },
+  {
+    "Id": 5702,
+    "Title": "Wrong Type in ShinyDarkGreen"
+  },
+  {
+    "Id": 6070,
+    "Title": "Can't tell state of ToggleButton when mouse is over button"
+  },
+  {
+    "Id": 6071,
+    "Title": "Correction to Expander Style of BureauBlue theme"
+  },
+  {
+    "Id": 6179,
+    "Title": "Difficult to grab Column splitter for resize in the ListView for Expression* themes"
+  },
+  {
+    "Id": 6180,
+    "Title": "ShinyDarkGreen throws on use"
+  },
+  {
+    "Id": 6181,
+    "Title": "DavesGlossyControls does not render Window"
+  },
+  {
+    "Id": 6182,
+    "Title": "UX* themes do not render windows"
+  },
+  {
+    "Id": 6551,
+    "Title": "TwiglightBlue radiobutton/checkbox initial databound values (ischecked) not displayed properly"
+  },
+  {
+    "Id": 6935,
+    "Title": "DisplayMemberPath doesn't work for ComboBox (BureauBlue)"
+  },
+  {
+    "Id": 6985,
+    "Title": "Expression Dark contents menu color problem"
+  },
+  {
+    "Id": 7017,
+    "Title": "MultiTrigger With SourceName In TreeViewItem Causes Null Pointer Exception"
+  },
+  {
+    "Id": 7078,
+    "Title": "ShinyDarkGreen - bug"
+  },
+  {
+    "Id": 7098,
+    "Title": "RainierOrange - TabControlPlacement doesn't work"
+  },
+  {
+    "Id": 8109,
+    "Title": "ListViewItem Height Bug"
+  },
+  {
+    "Id": 8368,
+    "Title": "TwilightBlue Scrollbar issue with Release 52413"
+  },
+  {
+    "Id": 8735,
+    "Title": "The resource \"WindowBackgroundBrush\" could not be resolved"
+  },
+  {
+    "Id": 9048,
+    "Title": "RainierOrange - Could not see which TabItem is Selected"
+  },
+  {
+    "Id": 9148,
+    "Title": "ComboBox virtualization not working with theme"
+  },
+  {
+    "Id": 9912,
+    "Title": "Front Page Outdated"
+  },
+  {
+    "Id": 10139,
+    "Title": "UXMuxingsRoughRed and UXMusingsRoughGreen have a bug with CheckBox Style"
+  },
+  {
+    "Id": 10226,
+    "Title": "BureauBlack Theme does not work with DataGrid"
+  },
+  {
+    "Id": 10718,
+    "Title": "Shiny Blue breaks TreeView context menu"
+  },
+  {
+    "Id": 10719,
+    "Title": "Expression Light menu item laid out incorrectly"
+  },
+  {
+    "Id": 11090,
+    "Title": "Missing Date picker and Datagrid"
+  },
+  {
+    "Id": 11923,
+    "Title": "ListBoxItem Selection Problem (WPF 3 Themes)"
+  },
+  {
+    "Id": 11987,
+    "Title": "WPF Ribbon control does'nt have theme"
+  },
+  {
+    "Id": 12002,
+    "Title": "BureauBlue button once disabled dose not change appearance"
+  },
+  {
+    "Id": 12066,
+    "Title": "Expression Dark theme bug  about ListBox.ItemsPanel"
+  },
+  {
+    "Id": 12297,
+    "Title": "TabControlPlacement Left"
+  },
+  {
+    "Id": 12562,
+    "Title": "TabItem Horizontal and vertical alignments"
+  },
+  {
+    "Id": 12952,
+    "Title": "ExpressionDark TreeView Item dark background"
+  },
+  {
+    "Id": 13108,
+    "Title": "WhistlerBlue textbox bottom half of letters hidden"
+  },
+  {
+    "Id": 13195,
+    "Title": "BureauBlue: Menu Icon disappears when I hover mouse on it"
+  }
+]

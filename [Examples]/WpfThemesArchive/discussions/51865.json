@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "174010",
+    "ThreadId": "51865",
+    "Html": "If I add a couple of radio buttons and set the IsChecked property on one of the them to True.  When the window displays, the radio button does not display checked state.  It is not until I check the other radio button that they will start to display correctly.  Whats worse is if I change the theme the checked radio button will no longer look checked unless I select the other radio button again.  The demo app from the source code download does this as well.  Is there a bug in the templates?<br>\r\n<br>\r\nI am using the March 23rd source code and the March 21st release of the WPF toolkit.<br>\r\n<br>\r\nAlso with these I cannot display several of the themes, I get a XAML error - 'The attachable property 'VisualStateGroups' was not found in type 'VisualStateManager'.\r\n",
+    "PostedDate": "2009-03-31T11:42:49.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "196680",
+    "ThreadId": "51865",
+    "Html": "<p>You might want to checkout the following posting I made to the codeplex site for the wpftoolkit, which also has a release of the same themes as on this site:</p>\r\n<p><a href=\"http://wpf.codeplex.com/Thread/View.aspx?ThreadId=58152\">http://wpf.codeplex.com/Thread/View.aspx?ThreadId=58152</a></p>\r\n<p>BTW, from what I've read the xaml error you describe is a bug in Visual Studio, there is a hotfix for it but it's hard to find. &nbsp;I managed to find it and download it, but haven't yet installed it - since in spite of the error the application still compiles and runs - so it appears to be a design time error which doesn't cause runtime issues (as far as I can tell).</p>\r\n<p>Regards,</p>\r\n<p>Phil</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-06-01T21:57:48.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

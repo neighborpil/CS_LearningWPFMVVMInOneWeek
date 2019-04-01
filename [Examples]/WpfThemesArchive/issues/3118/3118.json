@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed in build #21427",
+    "ClosedDate": "2009-01-05T05:38:21.077-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Seems that the progressbar IsIndeterminate=true is not working for any of the themes",
+    "LastUpdatedDate": "2013-05-16T04:32:46.53-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-11-07T10:14:05.263-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Progressbar IsIndeterminate=true does not work",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3118
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Playing around with the solution in blend, I can confirm that the issue it not with the actual xaml of the progressbar. If you link the progressbar to any of the resource dictionaries things are fine ... so somehow the way the theme is loaded is stopping the progressbar (and others?) to not receive its proper template.",
+      "PostedDate": "2008-11-07T10:31:48.983-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Just checked and you are correct! It doesn't work anymore! I will try and find the issue! I have a gut feel that it is a VSM issue!",
+      "PostedDate": "2008-11-24T00:34:58.01-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Its a VSM issue... I changed it to normal triggers... this fixes the issue, will post the new version soon!",
+      "PostedDate": "2009-01-05T04:48:53.643-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T05:38:21.077-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:05.14-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:32:46.53-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

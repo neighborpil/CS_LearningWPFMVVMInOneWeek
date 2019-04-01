@@ -13,12 +13,14 @@
             Height="50"
             Maximum="100"
             Value="10"
-            x:Name="slider" />
+            x:Name="Slider" />
         <ProgressBar
             Height="50"
-            Value="{Binding Value, ElementName=slider}" />
+            Value="{Binding Value, ElementName=Slider}" />
         <TextBox
             Height="50"
-            Text="{Binding Value, ElementName=slider}" />
+            Text="{Binding Value, ElementName=Slider}" />
+
+        
     </StackPanel>
 </Page>

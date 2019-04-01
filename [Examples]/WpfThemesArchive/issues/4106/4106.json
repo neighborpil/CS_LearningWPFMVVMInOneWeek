@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "With DavesGlossyControls, if you have a TextBlock with a Hyperlink inline in a ListBoxItem, you are unable to click on it.  The \"gloss\" Rectangle over the ContentPresenter in the style receives the clicks.  I set IsHitTestVisible=\"False\" on the gloss Rectangle, recompiled, and it works fine.",
+    "LastUpdatedDate": "2013-02-21T17:10:02.613-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-03-21T20:42:57.91-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ListBoxItem in DavesGlossyControls prevents clicking on Hyperlink inlines",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 4106
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

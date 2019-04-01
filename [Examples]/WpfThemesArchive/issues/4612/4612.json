@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi there\n \nI just downloaded the latest version and noticed that several themes still render a vertical scrollbar instead of a horizontal one if the horizontal content is too wide.\n \nSteps to reproduce:\n \n1: Add a longer name in code behind.\n2: Start the application\n3: Switch to Dave's, ShinyDarkTeal, UxMusingsBubblyBlue or several other themes\n4: The control renders a vertical scrollbar at the bottom of the control (see attached screenshot)\n \nCheers,\nPhilipp",
+    "LastUpdatedDate": "2013-02-21T17:10:02.033-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-06-24T01:55:02.323-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Buggy Horizontal Scrollbars in Several Themes",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 4612
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1522,
+      "FileName": "scrollbars.png",
+      "DownloadUrl": ".\\1522"
+    }
+  ],
+  "Comments": []
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "461624",
+    "ThreadId": "217854",
+    "Html": "Actually, when I try select some item of my ListView It just happen I click on text of a row. If I click in some part of the row that don´t have text selection doesn´t happen. So, I did the follow changes on ListViewItem style of ExpressionDark.xaml theme.\r\n<br>\r\n<br>\r\n<code>\r\n&lt;Grid Margin=&quot;2,0,2,0&quot; <b>Background=&quot;Transparent&quot;</b>&gt;<br>\r\n &nbsp; &nbsp;  &nbsp; &lt;Rectangle x:Name=&quot;Background&quot; IsHitTestVisible=&quot;False&quot; Opacity=&quot;0.25&quot; Fill=&quot;{StaticResource NormalBrush}&quot; RadiusX=&quot;1&quot; RadiusY=&quot;1&quot;/&gt;<br>\r\n  &nbsp;  &nbsp;  &lt;Rectangle x:Name=&quot;HoverRectangle&quot; IsHitTestVisible=&quot;False&quot; Opacity=&quot;0&quot; Fill=&quot;{StaticResource NormalBrush}&quot; RadiusX=&quot;1&quot; RadiusY=&quot;1&quot;/&gt;<br>\r\n  &nbsp;  &nbsp;  &lt;Rectangle x:Name=&quot;SelectedRectangle&quot; IsHitTestVisible=&quot;False&quot; Opacity=&quot;0&quot; Fill=&quot;{StaticResource SelectedBackgroundBrush}&quot; RadiusX=&quot;1&quot; RadiusY=&quot;1&quot;/&gt;<br>\r\n  &nbsp;  &nbsp;  &lt;GridViewRowPresenter SnapsToDevicePixels=&quot;{TemplateBinding SnapsToDevicePixels}&quot; Margin=&quot;0,2,0,2&quot; VerticalAlignment=&quot;Stretch&quot; /&gt;<br>\r\n&lt;/Grid&gt;<br>\r\n</code>\r\n<br>\r\nI just include Background=&quot;Transparent&quot; and problem was solved.\r\n<br>\r\nCya.",
+    "PostedDate": "2010-06-30T05:50:49.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

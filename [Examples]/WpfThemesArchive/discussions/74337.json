@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "254292",
+    "ThreadId": "74337",
+    "Html": "<p>I tried a couple of the themes, such as the UX red/green and they wouldn't work in my WPF app.&nbsp; Are the SL themes not compatible with WPF? If not, then I would suggest changing the site a bit because it leads people to believe they do indeed work.</p>\r\n<p>If they do work, what do I need to do? Most of the problems were from the Visual State Manager which doesn't seem to exist in WPF.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-11-06T08:43:43.44-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "254307",
+    "ThreadId": "74337",
+    "Html": "<p>Visual State Manager is included with the WPF Toolkit (http://www.codeplex.com/wpf) you will need to reference this assembly for the skins to work. SL themes in general are not compatible with WPF, these particular themes though have been ported by rudi.</p>",
+    "PostedDate": "2009-11-06T09:29:16.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280437",
+    "ThreadId": "74337",
+    "Html": "<p>I've been trying to get the basic released themes to work in a WPF Project.</p>\r\n<p>Downloaded the WPFToolkit and Silverlight 3 SDK.</p>\r\n<p>Referencing the WPFToolkit.dll works fine with my project, but when I try to reference System.Windows.Controls.Theming.Toolkit.dll</p>\r\n<p>it keeps telling me I have an a Assembly mismatch. The .xaml Theme files reference that *.dll and examples have shown to include it.</p>\r\n<p>Where am I going wrong on this?</p>\r\n<p>I'd appreciate any advice / help.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance</p>",
+    "PostedDate": "2010-01-22T01:21:49.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280480",
+    "ThreadId": "74337",
+    "Html": "<p>Unless your really want to go down the dll root I would suggest using the raw xaml files instead. Remove reference to System.Windows.Controls.Theming.Toolkit.dll</p>\r\n<p>and in your constructor or window.load handling add the following.</p>\r\n<p>//New resource dictionary.<br>ResourceDictionary skin = new ResourceDictionary();<br><br>//Set new source.<br>skin.Source = new Uri(@&quot;C:\\myskin.xaml&quot;, UriKind.Absolute);<br><br>//Merge.<br>App.Current.Resources.MergedDictionaries.Add(skin);</p>\r\n<p>Where &quot;C:\\myskin.xaml is the absolute path to the theme you wish to apply. Using the raw xaml as aposed to the dll means you can customize the styles yourself. Also if you move the above code to a method you can change the theme during runtime.</p>",
+    "PostedDate": "2010-01-22T02:31:43.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280488",
+    "ThreadId": "74337",
+    "Html": "<p>First of all, thanks for the speedy reply Nobster.</p>\r\n<p>So I started from scratch:</p>\r\n<p>New WPF App; referenced WPFToolKit, added your code to constructor window for testing; added fresh &quot;System.Windows.Controls.Theming.ExpressionDark.xaml&quot; to Project.</p>\r\n<p>and.....nothing :) no build for me</p>\r\n<p>Is my assumption correct that I have to alter the ResourceDir of the &quot;Theme&quot;.xaml ?</p>\r\n<p>I altered the line xmlns:vsm=&quot;clr-namespace:System.Windows;assembly=System.Windows&quot; to</p>\r\n<p>the WPFToolKit assembly but that only led to another row of errors...</p>\r\n<p>What am I missing? :) The WPF Theme section described porting these themes as totally simple :(</p>",
+    "PostedDate": "2010-01-22T02:54:31.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280495",
+    "ThreadId": "74337",
+    "Html": "<p><br>In the line skin.Source = new Uri(@&quot;C:\\myskin.xaml&quot;, UriKind.Absolute); change C:\\myskin.xaml to wherever you have the xaml file on your harddisk.</p>\r\n<p>So if your expressiondark.xaml file was called expressiondark.xaml and was sitting on the root you would rename C:\\myskin.xaml to C:\\expressiondark.xaml.</p>\r\n<p>You don't need to change anything in the xaml itself and nothing other then WpfToolkit&nbsp; needs to be added to the project although I'm sure you could add the xaml file as a resource but then you'll need different syntax to use it.</p>\r\n<p>Above when you say&nbsp; &quot;nothing :) no build for me&quot; do you mean your getting an error?</p>",
+    "PostedDate": "2010-01-22T03:20:15.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280506",
+    "ThreadId": "74337",
+    "Html": "<p>To clear things up I added and altered your code to point to my .xaml sorry should have written that.</p>\r\n<p>here the constructor code:</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">public</span> <span style=\"color:Blue\">partial</span> <span style=\"color:Blue\">class</span> Window1 : Window\r\n    {\r\n        <span style=\"color:Blue\">public</span> Window1()\r\n        {\r\n            <span style=\"color:Green\">//New resource dictionary.</span>\r\n            ResourceDictionary skin = <span style=\"color:Blue\">new</span> ResourceDictionary();\r\n\r\n            <span style=\"color:Green\">//Set new source.</span>\r\n            skin.Source = <span style=\"color:Blue\">new</span> Uri(<span style=\"color:#A31515\">@&quot;D:\\VS2008_Projects\\WpfApplication1\\WpfApplication1\\System.Windows.Controls.Theming.ExpressionDark.xaml&quot;</span>, UriKind.Absolute);\r\n\r\n            <span style=\"color:Green\">//Merge.</span>\r\n            App.Current.Resources.MergedDictionaries.Add(skin);\r\n\r\n\r\n            InitializeComponent();\r\n        }\r\n    }\r\n</pre>\r\n<pre>and here whats in the ResourceDirectory at the top of the ExpressionDark.xaml:</pre>\r\n<pre><div style=\"color:Black;background-color:White\"><pre>&lt;ResourceDictionary xmlns=<span style=\"color:#A31515\">&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</span>\r\n                    xmlns:x=<span style=\"color:#A31515\">&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</span>\r\n                    xmlns:system=<span style=\"color:#A31515\">&quot;clr-namespace:System;assembly=mscorlib&quot;</span> \r\n                    xmlns:inputToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit&quot;</span>\r\n                    xmlns:vsm=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows;assembly=WPFToolkit&quot;</span>\r\n                    xmlns:controls=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls&quot;</span>\r\n                    xmlns:controlsToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit&quot;</span>\r\n                    xmlns:input=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input&quot;</span>\r\n                    xmlns:controlsPrimitives=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls&quot;</span>\r\n                    xmlns:data=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data&quot;</span>\r\n                    xmlns:dataPrimitives=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data&quot;</span>\r\n                    xmlns:chartingToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit&quot;</span> \r\n                    xmlns:visualizationToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit&quot;</span>\r\n                    xmlns:chartingPrimitivesToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.DataVisualization.Charting.Primitives;assembly=System.Windows.Controls.DataVisualization.Toolkit&quot;</span>\r\n                    xmlns:dataForm=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit&quot;</span>\r\n                    xmlns:inputPrimitivesToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input&quot;</span>\r\n                    xmlns:inputToolkitPrimitives=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Input.Toolkit&quot;</span>\r\n                    xmlns:layoutPrimitivesToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Layout.Toolkit&quot;</span>\r\n                    xmlns:layoutToolkit=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit&quot;</span>\r\n                    xmlns:theming=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls.Theming;assembly=System.Windows.Controls.Theming.Toolkit&quot;</span>\r\n                    xmlns:dataInput=<span style=\"color:#A31515\">&quot;clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input&quot;</span>  &gt;\r\n\r\n</pre>\r\n</div>\r\nI have referenced the WPFToolkit and added the file to my project. The xaml file is found through your code. But I get errors and it won't build:</pre>\r\n<pre><pre>Error\t1\tThe property 'UseLayoutRounding' does not exist in XML namespace 'http://schemas.microsoft.com/winfx/2006/xaml/presentation'. Line 84 Position 60.\tD:\\VS2008_Projects\\WpfApplication1\\WpfApplication1\\System.Windows.Controls.Theming.ExpressionDark.xaml\t84\t60\tWpfApplication1\r\n</pre>\r\n</pre>\r\n<pre>And that's just one of many, I am referencing something wrong? ...</pre>\r\n</div>",
+    "PostedDate": "2010-01-22T03:47:08.653-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280509",
+    "ThreadId": "74337",
+    "Html": "<p>I had made one change to the DarkExpression.xaml</p>\r\n<pre>xmlns:vsm=&quot;clr-namespace:System.Windows;assembly=System.Windows&quot;</pre>\r\n<p>was the original state of the entry. If I leave it at that I can an error stating that</p>\r\n<pre>Error\t1\tThe tag 'VisualStateManager.VisualStateGroups' does not exist in XML namespace 'clr-namespace:System.Windows;assembly=System.Windows'. Line 33 Position 14.\tD:\\VS2008_Projects\\WpfApplication1\\WpfApplication1\\System.Windows.Controls.Theming.ExpressionDark.xaml\t33\t14\tWpfApplication1\r\n</pre>\r\n<p>&nbsp;</p>\r\n<p>so yeah.......I 'm kinda stumped</p>",
+    "PostedDate": "2010-01-22T03:55:01.553-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280518",
+    "ThreadId": "74337",
+    "Html": "<p>Ok not sure why all those assembly references are in there. Where did you get this version of the theme?</p>\r\n<p>I re-downloaded the one from microsoft to check and it looks like this</p>\r\n<p>&lt;ResourceDictionary<br>&nbsp; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;<br>&nbsp; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;<br>&nbsp; xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot;<br>&nbsp; mc:Ignorable=&quot;d&quot;<br>&nbsp; xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot;&gt;</p>\r\n<p>I would re-download expression dark from here, http://wpf.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=14962</p>\r\n<p>or try my modified theme which supports calendar and datagrid as well http://www.mediafire.com/file/0iugmzygmmz/ExpressionDark.xaml.</p>\r\n<p>EDIT: I would also call&nbsp; InitializeComponent(); before running any other code but I don't think it matters when just loading a theme.</p>",
+    "PostedDate": "2010-01-22T04:06:06.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280526",
+    "ThreadId": "74337",
+    "Html": "<p>It compiles! :D And the button looks expressionistically Dark :D</p>\r\n<p>Ok the breakdown:</p>\r\n<p>It was indeed the wrong xaml file. And guess I found out my error:</p>\r\n<pre><a href=\"http://wpf.codeplex.com/wikipage?title=WPF Themes&referringTitle=Home\">http://wpf.codeplex.com/wikipage?title=WPF%20Themes&amp;referringTitle=Home</a></pre>\r\n<p>The describing sentence:</p>\r\n<pre>An updated collection of seven themes replaces the original nine WPF Themes. </pre>\r\n<pre>Some of the issues with the original themes have been addressed in this update. </pre>\r\n<pre>Download the WPF Themes in the WPF Futures release.<strong> <span style=\"text-decoration:underline\">This collection of themes can also be found in the Silverlight Toolkit.</span></strong> \r\n</pre>\r\n<pre><strong>Led me to believe I could take the design files out of my Silverlight SDK that I had already downloaded.</strong></pre>\r\n<pre>But I guess those are specifically for Silverlight(?).</pre>\r\n<pre>Thank you very very much for the troubleshooting help Nobster.</pre>",
+    "PostedDate": "2010-01-22T04:26:55.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "280528",
+    "ThreadId": "74337",
+    "Html": "<p>No worries, glad you got it sorted</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-22T04:34:15.333-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

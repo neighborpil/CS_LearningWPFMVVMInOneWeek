@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "414705",
+    "ThreadId": "203977",
+    "Html": "<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>In ThemeManager class<br><span style=\"color:Blue\"><br>public</span> <span style=\"color:Blue\">static</span> ResourceDictionary GetThemeResourceDictionary(<span style=\"color:Blue\">string</span> theme)<br>{<br>...<br>    <strong>Assembly assembly = Assembly.LoadFrom(<span style=\"color:#A31515\">&quot;WPF.Themes.dll&quot;</span>);<br></strong>        <br></pre>\r\n</div>\r\n</p>\r\n<p>fails when the directory is changed.</p>\r\n<p>This works better</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>Assembly assembly = Assembly.LoadFrom(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),<span style=\"color:#A31515\">&quot;WPF.Themes.dll&quot;</span>));\r\n<br><br>Anyway thanks for you good work. Love it!</pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2010-03-05T10:43:15.14-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

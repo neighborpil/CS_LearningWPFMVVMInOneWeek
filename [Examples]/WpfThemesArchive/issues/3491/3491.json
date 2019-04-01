@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Using the ExpressionDark theme any button with a content of \"_Button\" is displayed as \"_Button\" and not as \"Button\" with an underlined B.  If the theme is removed, the button displays as expected.  It also happens with RainierOrange and UXMusingsRed so I presume they are all affected.",
+    "LastUpdatedDate": "2013-02-21T17:10:04.29-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-12-17T06:08:06.427-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Button Content with _ not displaying as expected.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 3491
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "To get it to work I appended     RecognizesAccessKey=\"True\"   to the ContentPresenter to produce....\r\n\r\n<ContentPresenter HorizontalAlignment=\"{TemplateBinding HorizontalContentAlignment}\" Margin=\"{TemplateBinding Padding}\" x:Name=\"contentPresenter\" VerticalAlignment=\"{TemplateBinding VerticalContentAlignment}\" Content=\"{TemplateBinding Content}\" ContentTemplate=\"{TemplateBinding ContentTemplate}\" RecognizesAccessKey=\"True\" />\r\n",
+      "PostedDate": "2008-12-17T06:18:48.72-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks for the [RecognizesAccessKey=\"True\"] tip, but now the disble buttons have a strange shadow, and when disabling, renabling the buttons the shadow text is left with 3 sorts of blurred characters.",
+      "PostedDate": "2012-03-08T11:29:55.173-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-03-08T11:39:36.687-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Okay - I solved the disabled button shadow thing.\r\n1- Remove the <TextBlock Panel.ZIndex=\"1\" x:Name=\"DisabledOverlay.... item from the button grid\r\n2- Remove the <ObjectAnimationUsingKeyFrames BeginTime=\"00:00:00\" Storyboard.TargetName=\"DisabledOverlay\".... block from the <Storyboard x:Key=\"DisabledOn\"> in the button",
+      "PostedDate": "2012-03-08T11:48:37.91-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-03-27T14:05:19.533-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:04.29-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

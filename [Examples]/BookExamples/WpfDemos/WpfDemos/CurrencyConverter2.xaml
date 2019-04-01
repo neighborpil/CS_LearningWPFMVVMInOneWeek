@@ -1,0 +1,63 @@
+﻿<Page x:Class="WpfDemos.CurrencyConverter2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:WpfDemos"
+      xmlns:vm="clr-namespace:WpfDemos"
+      mc:Ignorable="d"
+      d:DesignHeight="96.429"
+      d:DesignWidth="275.143"
+      Title="CurrencyConverter2">
+    <Page.DataContext>
+        <vm:CurrencyConverterViewModel2 />
+    </Page.DataContext>
+    <Grid>
+        <TextBox x:Name="textBox"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="141,39,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding Euros, UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top"
+                 Width="120" />
+        <TextBlock x:Name="textBlock"
+                   HorizontalAlignment="Left"
+                   Margin="141,66,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding Converted}"
+                   VerticalAlignment="Top" />
+        <TextBlock x:Name="textBlock1"
+                   HorizontalAlignment="Left"
+                   Margin="10,40,0,0"
+                   TextWrapping="Wrap"
+                   Text="Amount in €"
+                   VerticalAlignment="Top" />
+        <TextBlock x:Name="textBlock1_Copy"
+                   HorizontalAlignment="Left"
+                   Margin="10,67,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding ResultText}"
+        VerticalAlignment="Top" />
+        <TextBlock x:Name="textBlock2"
+                   HorizontalAlignment="Left"
+                   Margin="10,10,0,0"
+                   TextWrapping="Wrap"
+                   Text="Currency"
+                   VerticalAlignment="Top" />
+        <ComboBox x:Name="comboBox"
+                  SelectedItem="{Binding SelectedCurrency}"
+                  ItemsSource="{Binding Currencies}"
+                  HorizontalAlignment="Left"
+                  Margin="141,10,0,0"
+                  VerticalAlignment="Top"
+                  Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+    </Grid>
+</Page>

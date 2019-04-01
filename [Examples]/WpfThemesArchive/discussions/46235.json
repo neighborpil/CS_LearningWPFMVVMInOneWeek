@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "154363",
+    "ThreadId": "46235",
+    "Html": "Hi,<br>\r\n<br>\r\nI can't get the demo to run.&nbsp; Is it because I'm using the Jan. 2009 WPF Toolkit?&nbsp; I get errors about not finding the VisualStateManager, and if I fix that, it says VSM doesn't have a property VisualStateGroups (which it doesn't seem to have anymore..).<br>\r\n<br>\r\nThanks<br>\r\nAndy<br>\r\n<br>\r\nUPDATE:&nbsp; Opps... forgot to let the demo use the latest version of the WPFToolkit as well.&nbsp; All if fine now.&nbsp; \r\n",
+    "PostedDate": "2009-02-04T11:08:14.457-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

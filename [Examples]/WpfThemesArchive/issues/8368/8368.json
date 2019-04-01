@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "After using the new release on mouse over of a scrollbar i get the following error:\n \nSystem.InvalidOperationException: Cannot animate '(0).(1)[1].(2)' on an immutable object instance.\n   at System.Windows.Media.Animation.Storyboard.ProcessComplexPath(HybridDictionary clockMappings, DependencyObject targetObject, PropertyPath path, AnimationClock animationClock, HandoffBehavior handoffBehavior, Int64 layer)\n   at System.Windows.Media.Animation.Storyboard.ClockTreeWalkRecursive(Clock currentClock, DependencyObject containingObject, INameScope nameScope, DependencyObject parentObject, String parentObjectName, PropertyPath parentPropertyPath, HandoffBehavior handoffBehavior, HybridDictionary clockMappings, Int64 layer)\n   at System.Windows.Media.Animation.Storyboard.ClockTreeWalkRecursive(Clock currentClock, DependencyObject containingObject, INameScope nameScope, DependencyObject parentObject, String parentObjectName, PropertyPath parentPropertyPath, HandoffBehavior handoffBehavior, HybridDictionary clockMappings, Int64 layer)\n   at System.Windows.Media.Animation.Storyboard.BeginCommon(DependencyObject containingObject, INameScope nameScope, HandoffBehavior handoffBehavior, Boolean isControllable, Int64 layer)\n   at System.Windows.VisualStateGroup.StartNewThenStopOld(FrameworkElement element, Storyboard[] newStoryboards)\n   at System.Windows.VisualStateManager.GoToStateInternal(FrameworkElement control, FrameworkElement stateGroupsRoot, VisualStateGroup group, VisualState state, Boolean useTransitions)\n   at System.Windows.VisualStateManager.GoToStateCommon(FrameworkElement control, FrameworkElement stateGroupsRoot, String stateName, Boolean useTransitions)\n   at System.Windows.VisualStateManager.GoToState(FrameworkElement control, String stateName, Boolean useTransitions)\n   at System.Windows.Controls.Primitives.Thumb.ChangeVisualState(Boolean useTransitions)\n   at System.Windows.Controls.Control.UpdateVisualState(Boolean useTransitions)\n   at System.Windows.Controls.Control.OnVisualStatePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)\n   at System.Windows.DependencyObject.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\n   at System.Windows.FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\n   at System.Windows.DependencyObject.NotifyPropertyChange(DependencyPropertyChangedEventArgs args)\n   at System.Windows.DependencyObject.UpdateEffectiveValue(EntryIndex entryIndex, DependencyProperty dp, PropertyMetadata metadata, EffectiveValueEntry oldEntry, EffectiveValueEntry& newEntry, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType)\n   at System.Windows.DependencyObject.SetValueCommon(DependencyProperty dp, Object value, PropertyMetadata metadata, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType, Boolean isInternal)\n   at System.Windows.DependencyObject.SetValue(DependencyPropertyKey key, Object value)\n   at System.Windows.DependencyObject.SetValue(DependencyPropertyKey dp, Boolean value)\n   at System.Windows.ReverseInheritProperty.FirePropertyChangeInAncestry(DependencyObject element, Boolean oldValue, DeferredElementTreeState treeState, Action`2 originChangedAction)\n   at System.Windows.ReverseInheritProperty.FirePropertyChangeInAncestry(DependencyObject element, Boolean oldValue, DeferredElementTreeState treeState, Action`2 originChangedAction)\n   at System.Windows.ReverseInheritProperty.FirePropertyChangeInAncestry(DependencyObject element, Boolean oldValue, DeferredElementTreeState treeState, Action`2 originChangedAction)\n   at System.Windows.ReverseInheritProperty.OnOriginValueChanged(DependencyObject oldOrigin, DependencyObject newOrigin, IList`1 otherOrigins, DeferredElementTreeState& oldTreeState, Action`2 originChangedAction)\n   at System.Windows.Input.MouseDevice.ChangeMouseOver(IInputElement mouseOver, Int32 timestamp)\n   at System.Windows.Input.MouseDevice.PreNotifyInput(Object sender, NotifyInputEventArgs e)\n   at System.Windows.Input.InputManager.ProcessStagingArea()\n   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)\n   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)\n   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)\n   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\n   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\n   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)\n   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)\n   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)\n   at MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)\n \nAll other Themes seem to be fine.",
+    "LastUpdatedDate": "2013-09-06T04:13:18.55-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-05-13T08:31:51.31-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "TwilightBlue Scrollbar issue with Release 52413",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 8368
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Seems to be caused by the MouseOver and Pressed Visual States in the scrollbar section of the Theme.xaml",
+      "PostedDate": "2010-05-13T08:45:23.507-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:09:58.49-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-09-06T04:13:18.55-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I think a Padding attribute should be added to the Border of the Expander style's control template. Without it, the content presenter goes right up to the edge of the border, which looks bad. I realize you could do this with margin, but I believe padding is a more natural way to do it.\n \nHere's how the Border element would look after the change.\n \n                                <Border\n                                    Visibility=\"Collapsed\"\n                                    x:Name=\"border\"\n                                    Margin=\"1,1,1,1\"\n                                    Padding=\"{TemplateBinding Padding}\"\n                                    BorderBrush=\"{DynamicResource GlyphBrush}\"\n                                    BorderThickness=\"1,1,1,1\"\n                                    CornerRadius=\"1,1,1,1\"\n                                    Background=\"{DynamicResource ControlBackgroundBrush}\">\n                                    <ContentPresenter\n                                        Focusable=\"false\"\n                                        HorizontalAlignment=\"{TemplateBinding HorizontalContentAlignment}\"\n                                        Margin=\"1,1,1,1\"\n                                        x:Name=\"ExpandSite\"\n                                        VerticalAlignment=\"{TemplateBinding VerticalContentAlignment}\"\n                                        DockPanel.Dock=\"Bottom\" /><!--Added padding to border - Dan M.-->\n                                </Border>",
+    "LastUpdatedDate": "2013-02-21T17:10:00.96-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-10-30T00:55:27.62-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Correction to Expander Style of BureauBlue theme",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6071
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

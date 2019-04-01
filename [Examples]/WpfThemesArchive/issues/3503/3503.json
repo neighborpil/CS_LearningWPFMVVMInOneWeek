@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Having got my colour picker tool on the Expression app I found that the brush colour was slightly off.  The corrected value is below.\n \n    <SolidColorBrush x:Key=\"WindowBackgroundBrush\" Color=\"#FF666666\" />",
+    "LastUpdatedDate": "2013-02-21T17:10:03.88-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-12-18T08:07:40.867-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WindowBackgroundBrush (ExpressionDark) doesn't match Expression",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3503
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

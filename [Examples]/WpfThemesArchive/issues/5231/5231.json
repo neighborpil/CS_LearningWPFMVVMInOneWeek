@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I've encountered this bug when tried to change HorizontalContentAlignment for ListBox, so all Items would stretch (or align to any other side). It seems that setting this property has no effect, when using all themes (I've tested in on expression dark, shiny blue and bureau black). I've fixed this bug manually, by adding this line to ListBoxItem style (near line 731):\n<Setter Property=\"HorizontalContentAlignment\" Value=\"{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}, Path=HorizontalContentAlignment}\" />",
+    "LastUpdatedDate": "2013-02-21T17:10:01.8-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-07-26T19:59:19.34-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Content alignment does not work for ListBox (it's items)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5231
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

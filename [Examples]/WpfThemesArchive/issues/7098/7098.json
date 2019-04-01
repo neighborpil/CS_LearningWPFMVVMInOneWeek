@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Instead of this Grids (TemplateBottom, TemplateLeft, TemplateRight) in the template, there should be just one (i left TemplateTop), with a DockPanel:\n        <Grid x:Name=\"TemplateTop\" Visibility=\"Visible\">\n                            <DockPanel LastChildFill=\"True\">\n                                <TabPanel Margin=\"2,2,2,-1\" x:Name=\"TabPanelTop\" Canvas.ZIndex=\"1\" IsItemsHost=\"True\"\n                                          DockPanel.Dock=\"{TemplateBinding TabStripPlacement}\" />\n                                <Border MinHeight=\"10\" MinWidth=\"10\" Background=\"{TemplateBinding Background}\" BorderBrush=\"{TemplateBinding BorderBrush}\" BorderThickness=\"{TemplateBinding BorderThickness}\" CornerRadius=\"0,0,3,3\">\n                                    <ContentPresenter Cursor=\"{TemplateBinding Cursor}\" HorizontalAlignment=\"{TemplateBinding HorizontalAlignment}\" Margin=\"{TemplateBinding Padding}\" x:Name=\"PART_SelectedContentHost\" ContentSource=\"SelectedContent\" VerticalAlignment=\"{TemplateBinding VerticalAlignment}\"/>\n                                </Border>\n                            </DockPanel>\n                            <Border x:Name=\"DisabledVisualTop\" IsHitTestVisible=\"False\" Opacity=\"0\" Canvas.ZIndex=\"1\" Background=\"#8CFFFFFF\" CornerRadius=\"0,0,3,3\"/>\n                        </Grid>",
+    "LastUpdatedDate": "2013-02-21T17:09:58.943-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-02-25T01:07:13.667-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "RainierOrange - TabControlPlacement doesn't work",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 7098
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

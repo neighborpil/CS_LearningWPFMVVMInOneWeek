@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The BureauBlack theme looks nothing like the Silverlight theme.  The DataGrid has rows with a WhiteSmoke or very light gray background and white text so you can't see the text.  The column headers are wrong too, more of a bubble style as opposed to the flatter Silverlight appearance.",
+    "LastUpdatedDate": "2013-02-21T17:09:57.257-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2011-02-20T07:23:48.7-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "BureauBlack Theme does not work with DataGrid",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 10226
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

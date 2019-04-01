@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "143474",
+    "ThreadId": "43168",
+    "Html": "Hello,<br>\r\n<br>\r\nFirst i would like to thank you for this great project,<br>\r\n<br>\r\nI was trying to apply it to an old project i got , every thing worked good except for listboxitem, I used a grid inside the template of the listboxitem and it was with stretch width, this didn't work in most of the themes untill i changed <br>\r\n<br>\r\n&lt;ContentPresenter HorizontalAlignment=&quot;Left&quot; Margin=&quot;{TemplateBinding Padding}&quot; /&gt;<br>\r\n<br>\r\ninto<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n &lt;ContentPresenter HorizontalAlignment=&quot;Stretch&quot; Margin=&quot;{TemplateBinding Padding}&quot; /&gt;<br>\r\n",
+    "PostedDate": "2008-12-30T01:35:52.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143477",
+    "ThreadId": "43168",
+    "Html": "Hello again <br>\r\n<br>\r\nI was able to fix it also by using this<br>\r\n<br>\r\n&lt;ContentPresenter HorizontalAlignment=&quot;{TemplateBinding HorizontalAlignment}&quot; Margin=&quot;{TemplateBinding Padding}&quot; /&gt;<br>\r\n<br>\r\ni think this is the correct way to fix that. <br>\r\n<br>\r\n<br>\r\n\r\n",
+    "PostedDate": "2008-12-30T01:51:01.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144328",
+    "ThreadId": "43168",
+    "Html": "Thank you shahbour,<br>\r\n<br>\r\nI have updated all the themes to set the HorizontalAlignment to the following:<br>\r\n<br>\r\nHorizontalAlignment=&quot;{TemplateBinding HorizontalContentAlignment}&quot;<br>\r\n<br>\r\nAlso note that the same bug applied to ComboBoxItem!<br>\r\n<br>\r\nWill post the new version soon... <br>\r\n<br>\r\nKindest regards,<br>\r\n<br>\r\nRudi\r\n",
+    "PostedDate": "2009-01-05T01:33:24.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

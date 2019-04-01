@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I tried the 17968 theme build and noticed the Expander control is not visible for the DavesGlossy and UXMusing themes.  Is this because they are not from the Silverlight toolkit?  Will all themes eventually be updated and concurrent?  Neat stuff.",
+    "LastUpdatedDate": "2013-02-21T17:10:04.65-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-11-18T05:41:57.13-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Expander Not Visible",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 3318
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Could not find the Wpf.Themes.DLL in 17968 build.",
+      "PostedDate": "2008-11-18T05:44:01.973-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Expander is currently only supported for themes from the silverlight toolkit! I will discuss with Dave & Corrina about them possible helping gettings all the control supported! Will try...",
+      "PostedDate": "2008-11-23T23:32:09.59-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-05T23:06:18.593-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-07T15:23:48.14-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:04.65-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

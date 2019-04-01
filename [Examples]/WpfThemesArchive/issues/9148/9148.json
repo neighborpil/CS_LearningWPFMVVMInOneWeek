@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have a ComboBox bound to the installed fonts, and use a custom item template to render each item in the corresponding font. If there are a lot of fonts installed, this menu takes a seriously long time to load without virtualization. With virtualization it is very manageable. Unfortunately, since I installed Expression Dark, virtualization seems to have been broken and the menu takes ages, even though it worked fine before.",
+    "LastUpdatedDate": "2013-02-21T17:09:57.76-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-08-09T18:41:45.593-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ComboBox virtualization not working with theme",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9148
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Actually it turns out this is incredibly easy to solve: just change the StackPanel inside the ComboBoxTemplate definition to a VirtualizingStackPanel and bingo. :)",
+      "PostedDate": "2010-08-09T19:32:00-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Have a look :\r\nhttp://social.msdn.microsoft.com/forums/en-US/wpf/thread/edaaf8d9-a829-48f2-b728-e29aba947837\r\n",
+      "PostedDate": "2012-05-15T05:43:22.63-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:09:57.76-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

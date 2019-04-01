@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "506025",
+    "ThreadId": "230580",
+    "Html": "<p>Hi,</p>\r\n<p>I am using the bureau blue theme in my application.</p>\r\n<p>I have created a context menu with some icons, and when I select an item on this menu, the icon is not displayed.</p>\r\n<p>Thanks,</p>",
+    "PostedDate": "2010-10-12T07:05:46.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526311",
+    "ThreadId": "230580",
+    "Html": "\r\n<p>I'm having exactly the same problem, when I hover the mouse on the MenuItem, the icon disappears.</p>\r\n",
+    "PostedDate": "2010-11-24T01:59:29.543-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526329",
+    "ThreadId": "230580",
+    "Html": "\r\n<p>Hi Tekk,</p>\r\n<p>I can't recall how many bugs there are with this theme so be aware.</p>\r\n<p>Since I do not know much about styling what I did was used the default context menu, style&nbsp;which it fits good with the rest of the theme.\r\n<br>\r\n<br>\r\n</p>\r\n",
+    "PostedDate": "2010-11-24T02:45:14.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526382",
+    "ThreadId": "230580",
+    "Html": "\r\n<p>Hi Galastur,</p>\r\n<p>thanks for reply, but how did you tell the context menu to use the default style?</p>\r\n<p>Previously I had the theme in App.xaml resources, but now I have it for each window/usercontrol in resources separately - but this is also causing the context menu to style with BurreauBlue.</p>\r\n",
+    "PostedDate": "2010-11-24T05:04:14.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526389",
+    "ThreadId": "230580",
+    "Html": "\r\n<p>So assuming the context menu is in a text block,</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre> <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">TextBlock</span> <span style=\"color:red\">x:Name</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">myTree</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">&gt;</span>\r\n <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">TextBlock.Resources</span><span style=\"color:blue\">&gt;</span>\r\n<span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">Style</span> <span style=\"color:red\">x:Key</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">MenuItemStyle</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">TargetType</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{x:Type MenuItem}</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">&gt;</span>\r\n<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">Style</span><span style=\"color:blue\">&gt;</span>\r\n <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">TextBlock.Resources</span><span style=\"color:blue\">&gt;</span>\r\n<span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">TextBlock.ContextMenu</span><span style=\"color:blue\">&gt;</span>\r\n   <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">ContextMenu</span><span style=\"color:blue\">&gt;</span>\r\n        <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">MenuItem</span> <span style=\"color:red\">Header</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">Delete</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">Style</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{StaticResource MenuItemStyle}</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">/&gt;</span>\r\n   <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">ContextMenu</span><span style=\"color:blue\">&gt;</span>\r\n<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">TextBlock.ContextMenu</span><span style=\"color:blue\">&gt;</span>\r\n<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">TextBlock</span><span style=\"color:blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n<p><br>\r\nHope it helps tekk. Let me know how it goes</p>\r\n<p><span style=\"color:#a31515; font-size:x-small\"><span style=\"color:#a31515; font-size:x-small\"><span style=\"color:#a31515; font-size:x-small\"></p>\r\n<p>&nbsp;</p>\r\n</span></span></span>\r\n<p></p>\r\n",
+    "PostedDate": "2010-11-24T05:21:03.573-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526397",
+    "ThreadId": "230580",
+    "Html": "\r\n<p>Thanks.</p>\r\n<p>Actually, I got to do this from code because the context menu is constructing on the run, so this worked for me:</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>MenuItem m = <span style=\"color:blue\">new</span> MenuItem();\r\nm.Style = <span style=\"color:blue\">new</span> Style(<span style=\"color:blue\">typeof</span>(MenuItem));\r\n\r\n</pre>\r\n</div>\r\n<p></p>\r\n",
+    "PostedDate": "2010-11-24T05:35:33.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

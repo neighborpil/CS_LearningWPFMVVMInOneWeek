@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "702140",
+    "ThreadId": "280511",
+    "Html": "\r\n<p>Hay..</p>\r\n<p>I am using the BureauBlue theme for my WPF application. I want all ComboBoxes to have both ValueMemberPath and DisplayMemberPath.</p>\r\n<p>But with this theme, the ComboBox displays &quot;System.Data.DataRowView&quot; instead of the DisplayMember on the drop down menu. So I used the,</p>\r\n<p style=\"padding-left:90px\">&lt;ComboBox.ItemTemplate&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DataTemplate&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;TextBlock&nbsp; Text=&quot;{Binding Path=TypeName}&quot; /&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DataTemplate&gt;<br>\r\n&nbsp;&lt;/ComboBox.ItemTemplate&gt;</p>\r\n<p>But &quot;&lt;TextBlock Text=&quot;{Binding TypeName}&quot; /&gt;&quot; doesn't show anything without ComboBox's DisplayMemberPath.<br>\r\nBut with DisplayMemberPath it shows correctly. But gives an error message &quot;Cannot set both DisplayMemberPath and ItemTemplate&quot;.<br>\r\n<br>\r\nWhat is this? Please help me..</p>\r\n<p>Thanks!</p>\r\n",
+    "PostedDate": "2011-11-22T20:07:56.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

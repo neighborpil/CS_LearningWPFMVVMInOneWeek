@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "213891",
+    "ThreadId": "62983",
+    "Html": "<p>I'm getting a lot of really bad memory leaks when using themes of any kind (not just these). &nbsp;I've found references to this issue here (although I think that the summary of the issues is not entirely accurate here):</p>\r\n<p><a href=\"http://blog.ramondeklein.nl/?p=58\">http://blog.ramondeklein.nl/?p=58</a></p>\r\n<p>I've created a test project that is a slight modification of the WPF.Themes.Demo project:</p>\r\n<p><a href=\"http://blog.ramondeklein.nl/?p=58\">http://files.getdropbox.com/u/376992/Theme Leak.zip</a></p>\r\n<p>It's not exactly production quality, but you get the picture. &nbsp;If you click on &quot;Add Tab&quot; and subsequently &quot;Remove Tab&quot; the user control that is stuffed in the new tab hangs around rooted in memory by the theme. &nbsp;You can test this using your favorite memory profiler (I use .NET Memory Profiler, but Ants, Windbg, etc all show the same thing).</p>\r\n<p>Does anyone have any information about avoiding this issue? &nbsp;It's a bit crazy that this bug exists... &nbsp;It doesn't appear that the effects use WeakReference (although I can see how that would be crazy hard to implement in a failsafe way).</p>\r\n<p>Any information is helpful.</p>",
+    "PostedDate": "2009-07-20T10:24:13.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

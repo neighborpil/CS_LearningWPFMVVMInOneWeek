@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I apply the wpf theme to a list view the list view item height appears collapsed.  XAML as follows:\n \n<UserControl x:Class=\"StrategiesModule.Views.StrategiesNavigationBarView.UserControl1\"\n    xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"\n    xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"\n    Height=\"300\" Width=\"300\">\n    <UserControl.Resources>\n        <ResourceDictionary>\n            <ResourceDictionary.MergedDictionaries>\n                <ResourceDictionary Source=\"ShinyBlue.xaml\"/>\n            </ResourceDictionary.MergedDictionaries>\n        </ResourceDictionary>\n    </UserControl.Resources>\n    <StackPanel>\n        <ListView>\n            <ListViewItem Content=\"1\" />\n        </ListView>\n    </StackPanel>\n</UserControl>",
+    "LastUpdatedDate": "2013-02-21T17:09:58.747-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-04-22T03:14:47.363-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ListViewItem Height Bug",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 8109
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "In my opinion <ContentPresenter/> is missing in ListViewItem control template.\r\nSolution:\r\nOpen proper theme and find: <ControlTemplate TargetType=\"{x:Type ListViewItem}\">\r\nIn <Border> element add <ContentPresenter/> element after last <Rectangle >\r\nFinal xaml should look something like this:\r\n<Rectangle x:Name=\"SelectedHoverRectangle\"\r\n                            \tIsHitTestVisible=\"False\"\r\n                            \tFill=\"{StaticResource HoverBrush}\"\r\n                            \tRadiusX=\"0\"\r\n                            \tOpacity=\"0\"/>\r\n                            <ContentPresenter/>",
+      "PostedDate": "2011-06-01T02:36:00.06-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:09:58.747-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

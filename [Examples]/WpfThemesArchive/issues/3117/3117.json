@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Error\t3\tThe tag 'VisualStateManager.VisualStateGroups' does not exist in XML namespace 'clr-namespace:System.Windows;assembly=WPFToolkit'. Line 175 Position 26.\tC:\\Downloads\\wpfthemes-15806\\WPF.Themes\\DavesGlossyControls\\Theme.xaml\t175\t26\tWPF.Themes",
+    "LastUpdatedDate": "2013-02-21T17:10:05.317-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-11-07T09:35:11.203-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cannot compile",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3117
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You can replace\r\nxmlns:vsm=\"clr-namespace:System.Windows;assembly=WPFToolkit\"   with\r\nxmlns:vsm=\"http://schemas.microsoft.com/wpf/2008/toolkit\"\r\n\r\nand then remove all of the 'vsm:' tags and everything should work.\r\n\r\nUse ctrl+h for a quick way to replace the above strings in all of the files in the solution ... be sure to choose look in: entire solution.",
+      "PostedDate": "2008-11-07T10:05:19.36-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Have you installed the WPF Toolkit? Which version? Is it refrenced?",
+      "PostedDate": "2008-11-24T00:39:10.4-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This solution technically worked because I can now build and run my applications BUT when I load my forms at design time the Design window reports \"Problem Loading The document contains errors that must be fixed...\"",
+      "PostedDate": "2010-01-22T20:37:00.19-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:05.317-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

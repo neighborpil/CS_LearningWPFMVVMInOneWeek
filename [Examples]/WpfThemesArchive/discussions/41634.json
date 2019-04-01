@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "138206",
+    "ThreadId": "41634",
+    "Html": "Hi, <br>\r\nThe TextBox control has a black cursor instead of white so the position of it is invisible to user.\r\n",
+    "PostedDate": "2008-12-05T23:08:31.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144369",
+    "ThreadId": "41634",
+    "Html": "hi denis...<br>\r\n<br>\r\nI have no idea how to fix this... will look into it....<br>\r\n<br>\r\nTnx<br>\r\n<br>\r\nrudi\r\n",
+    "PostedDate": "2009-01-05T04:39:02.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144660",
+    "ThreadId": "41634",
+    "Html": "Rudi<br>\r\n<br>\r\nFrom my experience, it is not currently possible to set the cursor color in a text box.  This issue has come up since .net 3.0, and has still not been addressed as far as I am aware<br>\r\n<br>\r\nSteve\r\n",
+    "PostedDate": "2009-01-06T02:33:32.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144678",
+    "ThreadId": "41634",
+    "Html": "<span id=UniqueID1231245570427><a href=\"http://groups.google.co.za/group/wpf-disciples/browse_thread/thread/722bf904f29980ef\">http://groups.google.co.za/group/wpf-disciples/browse_thread/thread/722bf904f29980ef</a></span>\r\n",
+    "PostedDate": "2009-01-06T04:39:49.673-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157990",
+    "ThreadId": "41634",
+    "Html": "I'm putting here the direct link to Lester's solution (for history purposes)<div><a href=\"http://blogs.msdn.com/llobo/archive/2007/02/08/changing-caret-color-in-textbox.aspx\">http://blogs.msdn.com/llobo/archive/2007/02/08/changing-caret-color-in-textbox.aspx</a><br></div>",
+    "PostedDate": "2009-02-16T02:38:14.3-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167689",
+    "ThreadId": "41634",
+    "Html": "Hi,<br>\r\n<br>\r\nDoes this post means that the &quot;SimpleTextBox&quot; style should be used for textboxes?<br>\r\n<br>\r\nWell, when I use it, I loose all the &quot;theme&quot; effect. <br>\r\n<br>\r\nAny suggestions? I am using DavesGlossyControls theme.<br>\r\n<br>\r\nAlso what is long term solution for this problem?Will it be addressed in next release?<br>\r\n<br>\r\nThanks,<br>\r\nMahesh.\r\n",
+    "PostedDate": "2009-03-13T04:19:38.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "464022",
+    "ThreadId": "218530",
+    "Html": "Hello, \r\n\r\nIt seems like there are two sets of themes out there. Your themes and the themes on WPF Futures. When I checked the expressiondark theme it's exactly the same size as the theme here. Are the two themes the same?\r\n\r\nThanks, \r\n\r\nRichard",
+    "PostedDate": "2010-07-06T18:42:44.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "464126",
+    "ThreadId": "218530",
+    "Html": "<p>I think initially the WPF Futures themes were only available for Silverlight. So the these themes started out as a conversion from those themes. When microsoft released the themes for WPF, the themes pack here was updated to match. So all the themes that are available in both should be exact copies.</p>",
+    "PostedDate": "2010-07-07T01:41:15.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "464192",
+    "ThreadId": "218530",
+    "Html": "So then are you saying that there's no more updates going on to either themes? What about the datagrid and other things that are missing?  Thanks, Richard",
+    "PostedDate": "2010-07-07T04:19:06.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "464196",
+    "ThreadId": "218530",
+    "Html": "<p>I'm sure microsoft will update their themes, not sure about the ones on here though</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-07T04:26:13.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

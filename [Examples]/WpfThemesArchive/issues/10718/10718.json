@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Using the markup below, the context menu is not shown on a right click if the ShinyBlue theme is applied.  If the default theme or expression light theme is used, it does appear.\n \n    <ContextMenu x:Key=\"EntrantCommands\">\n        <MenuItem Header=\"A\" />\n        <MenuItem Header=\"B\" />\n        <MenuItem Header=\"C\" />\n    </ContextMenu>\n    \n    <DataTemplate x:Key=\"EntrantsTemplate\" DataType=\"{x:Type local:Entrant}\">\n            <TextBlock ContextMenu=\"{StaticResource EntrantCommands}\">Dummy</TextBlock>\n    </DataTemplate>\n \n<HierarchicalDataTemplate x:Key=\"StartDetailTemplate\" DataType=\"{x:Type local:Start}\" \n                                  ItemsSource=\"{Binding Path=Entrants}\"\n                                  ItemTemplate=\"{StaticResource  EntrantsTemplate}\">\n        <TextBlock Text=\"{Binding Path=StartTime}\" />\n    </HierarchicalDataTemplate>\n   \n \n<TreeView  HorizontalAlignment=\"Stretch\"  Name=\"treeViewRacing2\" VerticalAlignment=\"Stretch\" \n                       ItemsSource=\"{Binding Path=RunningStarts}\" ItemTemplate=\"{StaticResource StartDetailTemplate}\"/>",
+    "LastUpdatedDate": "2013-02-21T17:09:57.02-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2011-04-08T01:55:09.23-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Shiny Blue breaks TreeView context menu",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10718
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

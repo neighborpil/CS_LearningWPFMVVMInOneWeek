@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "By using the Bureau* and Expression* thems I have problem with ListBox with SelectionMode=\"Multiple\". I am limiting the number of selected items to constant value by calling SelectedItems.RemoveAt method in code behind. These changes made programmatically were not reflected in UI - all items were selected.\n \nI managed to resolve this issue by replacing ListBoxItem's ControlTemplate's\n<Trigger Property=\"IsSelected\" Value=\"true\"> <Trigger.ExitActions> and <Trigger.EnterActions>\nby two equivalent Trigger setters.",
+    "LastUpdatedDate": "2013-02-21T17:09:56.503-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2012-03-27T14:30:17.547-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ListBoxItem Selection Problem (WPF 3 Themes)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 11923
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

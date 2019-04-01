@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When applying Expression Dark theme, the following code doesn't work. (WrapPanel doesn't effect)\nDoes anyone have any idea to solve this issue?\n \n<ListBox>\n            <ListBox.ItemsPanel>\n                <ItemsPanelTemplate>\n                    <WrapPanel/>\n                </ItemsPanelTemplate>\n            </ListBox.ItemsPanel>\n</ListBox>",
+    "LastUpdatedDate": "2013-02-21T17:09:55.98-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2012-04-24T05:14:13.96-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Expression Dark theme bug  about ListBox.ItemsPanel",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 12066
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

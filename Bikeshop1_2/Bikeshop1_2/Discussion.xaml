@@ -3,10 +3,12 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:data="clr-namespace:Bikeshop1_2"
       xmlns:local="clr-namespace:Bikeshop1_2"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Discussion">
+      Title="Discussion"
+      Background="{StaticResource background}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -17,8 +19,39 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="0" Grid.ColumnSpan="2" Margin="10"/>
-        <TextBox Grid.Row="1" Grid.Column="0" Margin="10, 0, 10, 10" Text="Type your message here"/>
-        <Button Grid.Row="1" Grid.Column="1" Margin="0, 0, 10, 10" Content="Send" />
+        <ListBox Grid.Row="0" Grid.ColumnSpan="2" Margin="10">
+            <ListBox.ItemsSource>
+                <data:Talk />
+            </ListBox.ItemsSource>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="300">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/StartAssets/chat.png" Width="20" />
+                            <TextBlock Text="{Binding Sender}" />
+                        </StackPanel>
+                        <TextBlock Text="{Binding Content}"
+                                   Margin="20, 0, 0, 0"
+                                   TextWrapping="Wrap" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:Name="txtCurrentMessage" Grid.Row="1" Grid.Column="0" Margin="10, 0, 10, 10" Text="Type your message here"/>
+        <Button Grid.Row="1" Grid.Column="1" Margin="0, 0, 10, 10" Content="Send" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="#AA000000"
+                                 Margin="10, 10, 0, 0" />
+                        <Ellipse Fill="{TemplateBinding Background}"
+                                 Margin="0, 0, 10, 10" />
+                        <Viewbox Margin="5, 5, 15, 15">
+                            <ContentPresenter />
+                        </Viewbox>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>

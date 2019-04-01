@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "251416",
+    "ThreadId": "73569",
+    "Html": "<p>The way the BureauBlue theme (and I assume others) currently works for toggle buttons, you can't see the state of the button when the mouse is over the button. It looks exactly the same whether the button is checked or unchecked. This makes it harder to use the toggle button than it could be.</p>\r\n<p>To correct this, I suggest replacing the HoverOn and HoverOff storyboards with HoverCheckedOn, HoverCheckedOff, HoverUncheckedOn, HoverUncheckedOff storyboards, then using MultiTriggers that test for each combination of IsMouseOver and IsChecked.</p>\r\n<p>Check out the way way toggle buttons work in the Microsoft Office ribbon for an example of how it should be done.</p>",
+    "PostedDate": "2009-10-29T16:36:57.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290328",
+    "ThreadId": "73569",
+    "Html": "<p>I'm having REAL issues with this at the moment with a touch screen application and the BureauBlack theme.&nbsp; Since it's touch screen the mouse is still over the button after you've clicked it.</p>\r\n<p>I'd be happy enough if there was a way for me to disable all hover states, but for all my Googling I can't figure out how.&nbsp; :(</p>\r\n<p>I guess I may have to build a custom version of the DLL and manually remove all the hover states if I can't figure out a better way.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-12T14:31:10.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290419",
+    "ThreadId": "73569",
+    "Html": "<p>Hastarin why not just use the raw xaml file rather then the dll, then you can just comment out the hover effects whether there implemented via triggers or the visualstatemanager. I don't use the BureauBlack theme, but I am also developing for touch screen and have done something similar with some of the other themes in the pack. I'll be back in the office monday if you need more help.</p>",
+    "PostedDate": "2010-02-13T04:00:15.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290501",
+    "ThreadId": "73569",
+    "Html": "<p>Ideally I'd hoped to allow the choice between multiple themes and just override things at my application level.&nbsp; That doesn't appear to be an option.</p>\r\n<p>I've also noticed the themes aren't really consistent enough to do what I wanted (varying readability of colors, fonts, etc) and will all most likely require some level of tweaking.&nbsp; For now I've just removed the hover states from the XAML for the BureauBlack and corresponding controls I'm using and built things in to my application.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-13T10:44:26.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290747",
+    "ThreadId": "73569",
+    "Html": "<p>&nbsp;</p>\r\n<p>//Initialize.</p>\r\n<p>ResourceDictionary skin = new ResourceDictionary();</p>\r\n<p>//Set new source.<br>skin.Source = new Uri(filename, UriKind.Absolute);<br><br>//Merge.<br>App.Current.Resources.MergedDictionaries.Add(skin);</p>\r\n<p>&nbsp;</p>\r\n<p>Where filename is the absolute path to the xaml file. This overrides at application level, and it allows changing skin at runtime.</p>",
+    "PostedDate": "2010-02-15T00:55:07.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290867",
+    "ThreadId": "73569",
+    "Html": "<p>Thanks, that's what I meant by &quot;built things in to my application&quot;.&nbsp; :)</p>",
+    "PostedDate": "2010-02-15T08:16:03.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

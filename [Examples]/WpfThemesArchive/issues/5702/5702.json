@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "ShinyDarkGreen\\Theme.xml\nLine 128\n \n<Color x:Key=\"TextBrush\">#FF000000</Color>\n \n=>\n \n<Brush x:Key=\"TextBrush\">#FF000000</Brush>",
+    "LastUpdatedDate": "2013-02-21T17:10:01.407-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-10-02T09:34:17.75-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Wrong Type in ShinyDarkGreen",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5702
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

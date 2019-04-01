@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "135838",
+    "ThreadId": "40940",
+    "Html": "I am considering creating multiple dll's for all the themes? Would this be OK? Then I could use something like MEF and specify a directory and it could dynamically locate all the available themes?<br>\r\n<br>\r\nPlease let me know what you think about this?<br>\r\n<br>\r\nThank you<br>\r\n<br>\r\nRudi\r\n",
+    "PostedDate": "2008-11-27T06:23:35.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "135962",
+    "ThreadId": "40940",
+    "Html": "<p style=\"margin:0in 0in 0pt;line-height:normal\"><span style=\"font-size:12pt;color:black;font-family:consolas\">As long as it is easy to save the user's selected theme.  I save the current theme in a settings file.  Retrieve theme when app loads with code below.  This is based on the your given strings &quot;ExpressionDark&quot;, etc..<br>\r\n<br>\r\n// Load theme on application level.</span></p>\r\n<p style=\"margin:0in 0in 10pt\"><span style=\"font-size:12pt;color:black;line-height:115%;font-family:consolas\">Application.Current.ApplyTheme(Properties.Settings.Default.ApplicationTheme);</span> </p>\r\n",
+    "PostedDate": "2008-11-27T15:19:30.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "136537",
+    "ThreadId": "40940",
+    "Html": "I'm not sure I'm the best qualified to answer this, but this sounds like a good plan to me. I plan on supplying a (very simple) theme of my own for my own application, and I guess users would love it if they could also choose from these professional looking ones. <br>\r\n<br>\r\nAs long as there is a simple way for an application to open the dll and apply the theme, this sounds like a dream come true! :)<br>\r\n<br>\r\nRune<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-01T03:18:30.457-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "137813",
+    "ThreadId": "40940",
+    "Html": "I think it could be easier to keep with one dll and only ship the theme files in a folder with a subdir for each theme. Then it would be easy to add or maintain themes by just adding or maintaining the XAML files (even in production environments).<br>\r\n<br>\r\nFurther I would suggest to rename the Theme.xaml files to eg. ExpressionDarkTheme.xaml because the resource panel of Blend just shows the filenames, not the folders. So you get lots of Theme.xaml which can't be distinguished. The rename would add the possibility to simply reference  the theme file from eg. Application.xaml when dynamic change of themes is not required.<br>\r\n<br>\r\nGreat work, thanks!! Hope to see it grow.<br>\r\n<br>\r\nMichael<br>\r\n",
+    "PostedDate": "2008-12-04T13:52:31.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143176",
+    "ThreadId": "40940",
+    "Html": "I really like the implementation that shaggygi has and agree with his statement that it's all good as long as it's easy to save and retrieve the theme based on a saved setting.<br>\r\n",
+    "PostedDate": "2008-12-28T00:17:34.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144361",
+    "ThreadId": "40940",
+    "Html": "Have a look here: <a href=\"http://dotnet.org.za/rudi/archive/2008/12/04/mef-taking-extensibility-to-the-next-level.aspx\">http://dotnet.org.za/rudi/archive/2008/12/04/mef-taking-extensibility-to-the-next-level.aspx</a>\r\n",
+    "PostedDate": "2009-01-05T04:21:08.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144389",
+    "ThreadId": "40940",
+    "Html": "This approach looks very promising.  MEF is new to me, but seems this would be very easy to add the plugins/updates very easily.  I found it inconvenient to have to add the new update ( project ) for WPF themes in my apps each time there is an update and recompile.  I watched the BabySmash video and if the WPF Themes update will be easy as copying a DLL ( or few files ), then this would be great.<br>\r\n<br>\r\nFew of questions.<br>\r\n<br>\r\n1. When do you plan on releasing an example of this approach?  Please include a small tutorial/example app to help the slow coders like me.<br>\r\n2. I noticed something about the Directory the MEF is watching for plugins.  How does this work on deployed applications?  Will end users need to have the same directory structure on their machines? How will this work for using the ClickOnce/Publishing to network? <br>\r\n3. Will this approach allow for other WPF Themes projects to work with our apps?  Meaning, if I or third party created themes ( not within your WPF themes ), would this work with our apps?<br>\r\n4. Will the approach I use for loading/saving the theme still work with this approach?  Currently use the code below to when app loads.<br>\r\n<br>\r\n<span style=\"font-family:consolas\">// Load theme on application level.</span> <br>\r\n<span style=\"font-size:12pt;color:black;line-height:115%;font-family:consolas\">Application.Current.ApplyTheme(Properties.Settings.Default.ApplicationTheme);</span> <br>\r\n<br>\r\n5. How far do you plan on going with the WPF Themes project?  I really like what you have provided and can't wait to see what you release in future.  I understand other projects, personal life, etc. can get in the way of progress.  Would like to see a better roadmap if possible.  Any progress is good.  Would like to see TextBlock, ListView, TabControl, etc. added.<br>\r\n<br>\r\nAs usual, keep up the great work.\r\n",
+    "PostedDate": "2009-01-05T06:05:26.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144655",
+    "ThreadId": "40940",
+    "Html": "All<br>\r\n<br>\r\nI love the work being done here by Rudi.  I agree that the themes should be added in seperate dlls, and the MEF approach is definetely a good approach.  In the meantime however, if you wish to seperate out your themes, you can do so very easily using the following approach.<br>\r\n<br>\r\nCreate the library project to contain your theme.<br>\r\nName it accordingly, for instance, MyNamepace.Wpf.Themes.BlackTheme<br>\r\nCreate a subdirectory called themes, and another within that with the same name as your theme, e.g. Themes/BlackTheme<br>\r\nWithin the BlackTheme subdirectory, add your Theme.xaml file.<br>\r\n<br>\r\nThis is all you need for your theme dll.  You then need to change to ThemeManager code as follows.  This method allows for having themes within the Themes dll or a separate library.<br>\r\n<br>\r\n<p>public static ResourceDictionary GetThemeResourceDictionary(string theme)<br>\r\n{<br>\r\n    if (theme != null)<br>\r\n    {<br>\r\n        //use the string to load an instance of the theme, from an external dll.<br>\r\n        var parts = theme.Split(';');</p>\r\n<p>        var assembly = Assembly.GetExecutingAssembly();</p>\r\n<p>        //if our parts length is equal to two, then we have specified an seperate dll also<br>\r\n        if(parts.Length==2)<br>\r\n        {<br>\r\n            var file = string.Concat(parts[1], &quot;.dll&quot;);</p>\r\n<p>            assembly = Assembly.LoadFrom(file);<br>\r\n        }</p>\r\n<p>        //if parts length is 1, then assume theme is in this assembly<br>\r\n        AssemblyName name = assembly.GetName();</p>\r\n<p>        string relativePackUriForResources =<br>\r\n            string.Concat(&quot;/&quot;, name.FullName, &quot;;component/themes/&quot;, parts[0], &quot;/&quot;, &quot;Theme.xaml&quot;);</p>\r\n<p>        Uri resourceLocater = new Uri(<br>\r\n            relativePackUriForResources, UriKind.Relative);</p>\r\n<p>        return Application.LoadComponent(resourceLocater)<br>\r\n                   as ResourceDictionary;</p>\r\n<p>    }<br>\r\n    <br>\r\n    return null;<br>\r\n}</p>\r\n<br>\r\nTo then use these themes in your application or control, you can use the attached theme property as follows:<br>\r\n<br>\r\nthemes:ThemeManager.Theme=&quot;BlackTheme;MyNamespace.Wpf.Themes.BlackTheme&quot;<br>\r\n<br>\r\nSeparating the theme name and library with a semicolon.<br>\r\n<br>\r\nThis method is quick and easy approach to separate out you themes.  However, as I stated above, using the MEF approach could possibly be a better longer term solution, and is more configurable.<br>\r\n<br>\r\nMichaels suggestion about having specifically named Theme files could also be catered for, just change the code to allow for setting the Theme.Xaml file name according to the theme name.<br>\r\n<br>\r\nCheers<br>\r\nSteve\r\n",
+    "PostedDate": "2009-01-06T02:20:19.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "170164",
+    "ThreadId": "40940",
+    "Html": "This is a great project! I took a look over the past weeks and its very exciting to see so many themes being offered in an open source project. Thanks a lot for making this available. <br>\r\n<br>\r\nI see this thread is a bit old, but I wanted to give some feedback regarding separate DLL's and code structure that would help me to make use of this project. First, separate DLL's for the themes is a great idea. Especially when deploying applications, giving the flexibility of keeping that deployment light and only including what is initially needed is a big plus.<br>\r\n<br>\r\nSecondly, I saw that WPF toolkit is on the roadmap. While its more of a pain to have more projects and more dll's, it would be extremely helpful if for each theme, the toolkit theme was in yet another separate DLL. This way those not using WPF toolkit would not need to have WPF toolkit in order to build the themes. For example, if I had a theme called TimsCoolYellow and I put it in a namespace like:<br>\r\n<br>\r\nTim.Wpf.TimsCoolYellow<br>\r\n<br>\r\nI would only cover the controls included in the latest .NET framework. When I cover WPF toolkit with my theme, I'd do something like<br>\r\n<br>\r\nTim.Wpf.Toolkit.TimsCoolYellow<br>\r\n<br>\r\nThen in project A, where I use toolkit all the time, I'd use both DLL's and bring in both resource dictionaries. In project B, where I don't use the toolkit, I would only bring in the first assembly. <br>\r\n<br>\r\nFinally, lets say I'm using Joe's Data Grid, which doesn't match any of the themes I have, but I really want to make it match TimsCoolYellow. I could create Tim.Wpf.Joe.TimsCoolYellow bring it in on the project I'm using that particular vendors controls only. <br>\r\n<br>\r\nAn argument against this may be that the TK controls are going to be part of a future version of the WPF release anyway, so its fine to package them together - just use the toolkit. However, the real value added is going to be where you have the flexibility in the code that allows users to select and switch between themes, to be able to look up optional extensions to a theme based on what the developer wanted to include (in the case of custom themes for third party vendor controls). At least for me, as I'm making use of some third party controls, I'd be much more likely to use the themes here if this separation was put in place. \r\n",
+    "PostedDate": "2009-03-20T05:36:48.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

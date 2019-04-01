@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When using Expression Dark theme, contents menus don't display correct. Background is rendered unstyled light gray and menu items and selection is themed.\nThis will result very hard reading menus. and you cannot quick fix it using <ContextMenu Background=\"Black\"> attribute. The menu icon area don't wont be colored.",
+    "LastUpdatedDate": "2013-02-21T17:09:59.55-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-02-04T17:44:27.087-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Expression Dark contents menu color problem",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 11,
+    "Id": 6985
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Any ideas on a temporary workaround?",
+      "PostedDate": "2011-05-06T11:42:30.68-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-09-03T18:43:49.703-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-09-19T13:50:52.317-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:09:59.55-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

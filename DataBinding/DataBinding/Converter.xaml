@@ -1,0 +1,15 @@
+﻿<Page x:Class="DataBinding.Converter"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:c="clr-namespace:Maths"
+      xmlns:local="clr-namespace:DataBinding"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Converter">
+    <!--<Page.Resources>
+        <c:TwiceConveter x:Key="twiceConv" />
+    </Page.Resources>
+    <TextBlock Value="{Binding Speed, Converter={StaticResource twiceConv}}" />-->
+</Page>

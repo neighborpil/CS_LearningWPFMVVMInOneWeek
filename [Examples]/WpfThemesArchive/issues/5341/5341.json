@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed in 34079",
+    "ClosedDate": "2009-09-25T04:51:36.857-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I noticed the WhistlerBlue ComboBoxes don't behave as the standard ones do. Clicking on the text does not drop down the menu.\n \nHowever, all that needs to be done is remove the 'IsHitTestEnabled=false' from ComboBoxToggleButton's first Rectangle (named \"Background\").",
+    "LastUpdatedDate": "2013-05-16T04:32:45.83-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-08-06T17:19:55-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Easy fix: WhistlerBlue ComboBoxToggleButton only works when clicking on arrow.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 5341
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Fixed in 34079!",
+      "PostedDate": "2009-09-25T04:50:51.093-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-09-25T04:51:36.857-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:01.62-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:32:45.83-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

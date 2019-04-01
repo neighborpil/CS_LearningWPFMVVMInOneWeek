@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\n \nI note that in the updated Themes, the HorizontalContentAlignment and VerticalContentAlignment values for TabItem are set to \"Center\".\n \nWhere the Content is a control such as StackPanel, it would be convenient if these values were \"Stretch\". It would also be convenient if the Padding was 0 in such a case. Such settings would allow the StackPanel to \"fill\" the TabItem.\n \nIs \"Center\" the best value for the default?\n \nIf so, what is the easiest way to obtain the equivalent of \"Dock.Fill\" within a TabItem?\n \nThanks,\nMartin",
+    "LastUpdatedDate": "2013-02-21T17:10:03.24-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-02-10T06:20:35.04-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Tab Item ContentAlignment and Padding",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 3775
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm having problems with this issue.\r\nIs there a workaround or something that I can do to make Content of TabItem to fill?\r\n\r\nThanks,\r\nNelson",
+      "PostedDate": "2009-07-01T07:10:10.593-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I am having the same problem.  If I create a control based on the tab item, setting the content presenter to stretch doesn't do anything (it just sizes the tab content to the size of the contained controls).  If I use the same XAML and put it in the application.xaml and use a tabitem and set it's style to my style it stretches the content the same as a normal tabitem would.   I have given up for now and I use my xaml as a style rather than a derived control, but if anyone can answer this I would be grateful.\r\n",
+      "PostedDate": "2009-11-02T03:04:29.807-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I am having the same problem.  If I create a control based on the tab item, setting the content presenter to stretch doesn't do anything (it just sizes the tab content to the size of the contained controls).  If I use the same XAML and put it in the application.xaml and use a tabitem and set it's style to my style it stretches the content the same as a normal tabitem would.   I have given up for now and I use my xaml as a style rather than a derived control, but if anyone can answer this I would be grateful.\r\n",
+      "PostedDate": "2009-11-02T03:04:33.59-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I am having the same problem.  If I create a control based on the tab item, setting the content presenter to stretch doesn't do anything (it just sizes the tab content to the size of the contained controls).  If I use the same XAML and put it in the application.xaml and use a tabitem and set it's style to my style it stretches the content the same as a normal tabitem would.   I have given up for now and I use my xaml as a style rather than a derived control, but if anyone can answer this I would be grateful.\r\n",
+      "PostedDate": "2009-11-02T03:04:36.07-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:03.24-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

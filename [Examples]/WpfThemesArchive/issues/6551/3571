@@ -1,0 +1,25 @@
+Index: Theme.xaml
+===================================================================
+--- Theme.xaml	(revision 1)
++++ Theme.xaml	(working copy)
+@@ -425,15 +425,13 @@
+                     <BeginStoryboard Storyboard="{StaticResource FocussedOn}" x:Name="FocussedOn_BeginStoryboard" />
+                 </Trigger.EnterActions>
+             </Trigger>
+-            <Trigger Property="IsChecked" Value="false">
+-
+-                <Trigger.ExitActions>
+-                    <BeginStoryboard x:Name="CheckedOn_BeginStoryboard" Storyboard="{StaticResource CheckedOn}" />
+-                </Trigger.ExitActions>
++            <Trigger Property="IsChecked" Value="true">
+                 <Trigger.EnterActions>
+-                    <BeginStoryboard x:Name="CheckedOff_BeginStoryboard" Storyboard="{StaticResource CheckedOff}" />
++                    <BeginStoryboard x:Name="CheckedOn_BeginStoryboard" Storyboard="{StaticResource CheckedOn}" />
+                 </Trigger.EnterActions>
+-
++                <Trigger.ExitActions>
++                    <BeginStoryboard x:Name="CheckedOff_BeginStoryboard" Storyboard="{StaticResource CheckedOff}" />
++                </Trigger.ExitActions>
+             </Trigger>
+             <Trigger Property="IsChecked" Value="True" />
+             <Trigger Property="IsMouseOver" Value="true">

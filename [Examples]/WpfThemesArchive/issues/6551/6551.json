@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When the isChecked property is databound on the RadioButton and checkbox controls, it is not displaying correctly, until the UI is redrawn or the controls are hovered over.  This can be reproduced in the sample application.  The intial checkbox and radiobuttons are actually checked, but they don't show that way until you hover over them",
+    "LastUpdatedDate": "2013-02-21T17:09:59.943-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-12-10T07:02:05.51-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "TwiglightBlue radiobutton/checkbox initial databound values (ischecked) not displayed properly",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6551
+  },
+  "FileAttachments": [
+    {
+      "FileId": 3570,
+      "FileName": "CheckBox.patch",
+      "DownloadUrl": ".\\3570"
+    },
+    {
+      "FileId": 3571,
+      "FileName": "CheckBox.patch",
+      "DownloadUrl": ".\\3571"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "This my patch for this bug. Tested on ExpressionDark theme.",
+      "PostedDate": "2010-10-16T04:41:52.777-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Here is my patch for this bug. Tested on ExpressionDark theme.",
+      "PostedDate": "2010-10-16T04:48:54.467-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-17T07:26:26.51-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:09:59.943-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

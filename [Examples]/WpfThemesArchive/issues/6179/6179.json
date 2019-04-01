@@ -1,0 +1,56 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The ExpressionLight and ExpressionDark themes seem to have too small an area defined for for the splitter for drag to resize. It appears to be one pixel. The other themes have several millimeters on each side of the actual splitter that are available for resizing.\n \nI think that this issue is easy enough to recreate but let me know if you want XAML or some sort of screen capture (I guess using Expression Encoder) to illustrate the problem.",
+    "LastUpdatedDate": "2013-02-21T17:10:00.733-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-11-09T13:58:05.54-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Difficult to grab Column splitter for resize in the ListView for Expression* themes",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 6179
+  },
+  "FileAttachments": [
+    {
+      "FileId": 4621,
+      "FileName": "MainWindow.xaml",
+      "DownloadUrl": ".\\4621"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "See the following sample (using Visual Studio 2010 express edition / new WPF application) :\r\n- between Title and FirstName columns, it is difficult to get the 'resize' cursor\r\n- between FirstName and LastName, it is impossible.\r\n\r\nIf I comment the '<ResourceDictionary Source=\"ExpressionDark.xaml\"/>' entry in my App.xaml, everything works fine.",
+      "PostedDate": "2011-12-31T03:06:21.437-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:00.733-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

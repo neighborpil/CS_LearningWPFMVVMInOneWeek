@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "291915",
+    "ThreadId": "85716",
+    "Html": "<p>Hi,</p>\r\n<p>I'm using Bureau Blue style in WPF and think it's great, thankyou. A problem I have is with button access keys. I usually use an underscore in wpf for access keys, but when the style is on, underscores show as part of the text, is there any way round this?</p>\r\n<p>Regards</p>\r\n<p>Chris</p>",
+    "PostedDate": "2010-02-17T15:05:42.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "807647",
+    "ThreadId": "85716",
+    "Html": "<p>Answered in here <a href=\"http://wpfthemes.codeplex.com/workitem/3491\">\"http://wpfthemes.codeplex.com/workitem/3491\"</a></p>",
+    "PostedDate": "2012-03-08T11:40:25.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

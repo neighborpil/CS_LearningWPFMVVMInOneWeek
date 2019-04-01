@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "419757",
+    "ThreadId": "205371",
+    "Html": "<p>The styles for the TabControl do not make use of the ItemsPanel property of the control. The template manually places a TabPanel in the control and sets IsItemsHost=True. While this works, I see no reason why it is necessary to limit the flexibility of the style this way. I suggest changing the TabPanel element in the template to ItemsPresenter. This worked fine for me locally (haven't noticed any problems). I wanted a TabControl that stacked its items using a StackPanel (kind of like the navigation control in Outlook), so I needed to be able to change the ItemsPanel (without restyling the whole thing).</p>",
+    "PostedDate": "2010-03-18T07:21:43.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

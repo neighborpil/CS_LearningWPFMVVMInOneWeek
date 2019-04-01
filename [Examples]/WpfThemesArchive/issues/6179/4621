@@ -1,0 +1,24 @@
+<Window x:Class="testPbSplitter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+         Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListView Name="listView1">
+             <ListView.View>
+                  <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="Title"/>
+                            <GridViewColumn Header="FirstName"/>
+                            <GridViewColumn Header="LastName"/>
+                            <GridViewColumn Header="Mail"/>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            <sys:String>test value</sys:String>
+            <sys:String>test value</sys:String>
+            <sys:String>test value</sys:String>
+            <sys:String>test value</sys:String>
+        </ListView>
+    </Grid>
+</Window>

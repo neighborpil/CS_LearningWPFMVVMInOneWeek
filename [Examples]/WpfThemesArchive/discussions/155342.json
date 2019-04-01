@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "362641",
+    "ThreadId": "155342",
+    "Html": "<p>Hi all,</p>\r\n<p>I'm trying to get going using the WPF Themes by just adding</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>    <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Application.Resources</span><span style=\"color:Blue\">&gt;</span>\r\n        <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">ResourceDictionary</span> <span style=\"color:Red\">Source</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">ExpressionDark.xaml</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">/&gt;</span>\r\n    <span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Application.Resources</span><span style=\"color:Blue\">&gt;</span>\r\n\r\n</pre>\r\n</div>\r\n</p>\r\n<p>to App.xaml like it says <a href=\"http://wpf.codeplex.com/wikipage?title=WPF Themes&referringTitle=Home\">here</a>. Now, my controls have the theme applied, accept for the background, which stays white.</p>\r\n<p>Any ideas?</p>\r\n<p>Thanks!</p>\r\n<p>Stefan</p>",
+    "PostedDate": "2010-02-22T06:44:44.95-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "362646",
+    "ThreadId": "155342",
+    "Html": "<p>The way I achieved it was to add a syle for the window to the xaml file, for example...</p>\r\n<p>&lt;Style x:Key=&quot;WindowStyle&quot; TargetType=&quot;{x:Type Window}&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=&quot;Background&quot; Value=&quot;{DynamicResource WindowBackgroundBrush}&quot;/&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/Style&gt;</p>\r\n<p>then in my window1.xaml I set the style attribute of the container Window.</p>\r\n<p>&lt;Window x:Class=YourClass&quot;<br>&nbsp;&nbsp;&nbsp; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;<br>&nbsp;&nbsp;&nbsp; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot; <br>&nbsp;&nbsp;&nbsp; Title=&quot;Window1&quot; Height=&quot;768&quot; Width=&quot;1024&quot;<br>&nbsp;&nbsp;&nbsp; <strong>Style=&quot;{DynamicResource WindowStyle}&quot;</strong>&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>EDIT: Actually I am loading the theme at run time, thats why I need the <strong>Style=&quot;{DynamicResource WindowStyle}&quot; </strong>you will probably not need this.</p>",
+    "PostedDate": "2010-02-22T06:53:35.907-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "362656",
+    "ThreadId": "155342",
+    "Html": "<p>Looked at the source to find the Demo project there, so I'm now looking at that.</p>\r\n<p>An apparent reason for the background to stay white, would be that the solidcolorbrush for windowbackground contains color=&quot;#FFF&quot;, but there seems more to it than just that (BureauBlack Theme in this case).</p>\r\n<p>Thanks for your sample BTW.</p>\r\n<p>Stefan</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-22T07:07:59.887-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

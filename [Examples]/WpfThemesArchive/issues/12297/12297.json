@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "If the TabControlPlacement property of a TabControl is set to Left or Right the header text of the tabs is turned by 90 degrees and is vertical now. The original behaviour of the TabControl is that the header is still vertival (see attachment). \n \nAlthough this is not a big issue, on a small window with many tabs there is also no arrow to scroll the tabs.",
+    "LastUpdatedDate": "2013-02-21T17:09:55.79-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2012-06-27T07:46:43.343-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "TabControlPlacement Left",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 12297
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5228,
+      "FileName": "Original TabControl.PNG",
+      "DownloadUrl": ".\\5228"
+    }
+  ],
+  "Comments": []
+}

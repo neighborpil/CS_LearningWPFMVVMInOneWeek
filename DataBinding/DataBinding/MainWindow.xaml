@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBinding"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="800">
     <Grid>
-        <Frame Source="DataBindingTest1.xaml"></Frame>
+        <!--<Frame Source="DataBindingTest1.xaml"></Frame>-->
+        <!--<Frame Source="DataBindingTest2.xaml"></Frame>-->
+        <!--<Frame Source="DataContextTest.xaml"></Frame>-->
+        <!--<Frame Source="DataContextTest.xaml"></Frame>-->
+        <!--<Frame Source="Converter.xaml"></Frame>-->
+        <Frame Source="ItemSource.xaml"></Frame>
     </Grid>
 </Window>

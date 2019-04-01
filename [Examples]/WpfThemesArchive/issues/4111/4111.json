@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "You can't see the caret/cursor in TextBox controls in DavesGlossyControls theme due to it being black on black.  You can change the cursor color per http://cloudstore.blogspot.com/2008/09/changing-caret-colour-in-wpf.html by setting the background of the TextBox in the DavesGlossyControls theme to #00000000.  Doing this and recompiling worked great for me!",
+    "LastUpdatedDate": "2013-02-21T17:10:02.42-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2009-03-22T08:21:28.397-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cursor/Caret not visible in TextBox controls in DavesGlossyControls",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 4111
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

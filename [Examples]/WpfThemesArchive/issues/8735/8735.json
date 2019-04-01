@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "As specified on the sample, to get theme background, we need to use this code :\n \n<Window Background=\"{DynamicResource WindowBackgroundBrush}\"/>\n \nWhile it works fine, there is a warning displaying the error every time on the WPF Designer.\n \nThank you !",
+    "LastUpdatedDate": "2013-02-21T17:09:58.197-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-06-12T07:33:11.513-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The resource \"WindowBackgroundBrush\" could not be resolved",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8735
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

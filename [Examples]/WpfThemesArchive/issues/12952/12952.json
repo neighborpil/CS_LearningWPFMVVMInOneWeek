@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Bug:\n<Border x:Name=\"MainBorder\" Opacity=\"0.25\" Background=\"{DynamicResource NormalBrush}\" CornerRadius=\"2,2,2,2\"/>\nMust be:\n<Border x:Name=\"MainBorder\" Opacity=\"0.25\" Background=\"{DynamicResource ControlBackgroundBrush}\" CornerRadius=\"2,2,2,2\"/>",
+    "LastUpdatedDate": "2013-09-06T04:11:31.433-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2013-06-17T08:21:04.96-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ExpressionDark TreeView Item dark background",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 12952
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

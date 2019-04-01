@@ -55,7 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Car.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="ItemSource.xaml.cs">
+      <DependentUpon>ItemSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TwiceConveter.cs" />
+    <Page Include="Converter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DataBindingTest1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataBindingTest2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataContextTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemSource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,8 +89,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converter.xaml.cs">
+      <DependentUpon>Converter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataBindingTest1.xaml.cs">
       <DependentUpon>DataBindingTest1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindingTest2.xaml.cs">
+      <DependentUpon>DataBindingTest2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContextTest.xaml.cs">
+      <DependentUpon>DataContextTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

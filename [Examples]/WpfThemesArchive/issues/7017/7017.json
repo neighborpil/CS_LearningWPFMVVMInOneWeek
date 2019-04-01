@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "There is a bug in the WPF Framework that having the TreeViewItem have a MultiTrigger tied to it with a SourceName element exposes.  This is a very odd bug because it will only occur in the case where the TreeViewItem is selected before being created.  A way of creating this is to bind a TreeView to an collection.  The collection needs to refresh so that the selected item is removed and a new item is added as the first item.  This will cause a null pointer exception see http://www.steelyeyedview.com/2010/02/sourcename-in-multitriggers-in-wpf.html for an explination of where the WPF bug is.  To work around this in the styles the SourceName needs to be removed.  This occurs in SourceName=\"Selection_Border\" in the BureauBlack, BureauBlue, ExpressionDark, ExpressionLight, ShinyBlue, ShinyDarkGreen, ShinyRed.\n \nRemoving the SourceName=\"Selection_Border\" from the trigger has minimum effect because the border that is the immediate child of the control and fills the control.  Therefore there is no noticeable difference in the change",
+    "LastUpdatedDate": "2013-02-21T17:09:59.343-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2010-02-12T17:24:43.633-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "MultiTrigger With SourceName In TreeViewItem Causes Null Pointer Exception",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7017
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

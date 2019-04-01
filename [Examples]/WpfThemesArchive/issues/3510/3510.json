@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Tab Control does not display correctly when Expression Dark selected.  Remove it from the theme file and all is well (although not themed)",
+    "LastUpdatedDate": "2013-02-21T17:10:03.43-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-12-21T12:13:26.753-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Tab Control does not display correctly when Expression Dark selected.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 7,
+    "Id": 3510
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I tried the suggestion in the description for removing the TabControl style settings from the theme file and it worked... kinda.  The items inside the tabitem controls displayed with the proper styling, however the headers for the tabitems aren't displaying.",
+      "PostedDate": "2008-12-30T17:20:40.23-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "*update*\r\nTaking out the tabitem style brought back the tabitem headers, though not styled.",
+      "PostedDate": "2008-12-30T17:24:21.44-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-19T06:34:18.907-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-26T09:39:57.51-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-01T07:11:35.787-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-11T15:09:50.71-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:03.43-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

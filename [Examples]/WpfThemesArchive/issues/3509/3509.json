@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This renders the control in a weird way. The thumb appears to work although the track that it runs on is wrong.",
+    "LastUpdatedDate": "2013-02-21T17:10:03.647-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfthemes",
+    "ReportedDate": "2008-12-21T12:10:06.39-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Slider - Orientation=\"Vertical\"",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3509
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "To clarify, the runner should rotate 90 degs and so should the thumb.",
+      "PostedDate": "2008-12-21T12:11:40.407-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T17:10:03.647-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

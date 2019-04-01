@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "262124",
+    "ThreadId": "76652",
+    "Html": "<p>Hi,</p>\r\n<p>Any chance of getting the PasswordBox styled as well? I've tried to duplicate the TextBox style but the background of the PasswordBox remains white while the background of the TextBox is as per the style.</p>\r\n<p>Thanks,<br>Corneliu&nbsp;</p>",
+    "PostedDate": "2009-11-30T19:31:11.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "632446",
+    "ThreadId": "76652",
+    "Html": "<p>Yes, you actually can.</p>\n<p>I did it with Dave's Glossy style, but I imagine it's the same with the others, mostly. Worked for me like a charm.</p>\n<p>Change the textbox style</p>\n<p>from</p>\n<p>&nbsp;&lt;Style x:Key=\"{x:Type TextBox}\" TargetType=\"{x:Type TextBox}\" &gt; ...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ControlTemplate TargetType=\"{x:Type TextBox}\"&gt;...</p>\n<p>to</p>\n<p>&nbsp;&lt;Style x:Key=\"TextBoxDefault\" TargetType=\"{x:Type Control}\" &gt; ...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ControlTemplate&gt; ...</p>\n<p>Then base your TextBox, PasswordBox, RichtTextBox styles upon that style:</p>\n<p>&nbsp;&nbsp;&nbsp; &lt;!-- TextBox --&gt;<br /> &nbsp;&nbsp;&nbsp; &lt;Style TargetType=\"{x:Type TextBox}\" BasedOn=\"{StaticResource TextBoxDefault}\" /&gt;<br /> <br /> &nbsp;&nbsp;&nbsp; &lt;!-- PasswordBox --&gt;<br /> &nbsp;&nbsp;&nbsp; &lt;Style TargetType=\"{x:Type PasswordBox}\" BasedOn=\"{StaticResource TextBoxDefault}\"&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=\"PasswordChar\" Value=\"●\"/&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=\"KeyboardNavigation.TabNavigation\" Value=\"None\"/&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=\"ScrollViewer.PanningMode\" Value=\"VerticalFirst\"/&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=\"Stylus.IsFlicksEnabled\" Value=\"False\"/&gt;<br /> &nbsp;&nbsp;&nbsp; &lt;/Style&gt;<br /> <br /> &nbsp;&nbsp;&nbsp; &lt;!--RichTextBox --&gt;<br /> &nbsp;&nbsp;&nbsp; &lt;Style TargetType=\"{x:Type RichTextBox}\" BasedOn=\"{StaticResource TextBoxDefault}\"&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Style.Resources&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Style TargetType=\"{x:Type Paragraph}\"&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter Property=\"Margin\" Value=\"2\"/&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Style&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Style.Resources&gt;<br /> &nbsp;&nbsp;&nbsp; &lt;/Style&gt;</p>",
+    "PostedDate": "2011-06-24T04:40:40-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

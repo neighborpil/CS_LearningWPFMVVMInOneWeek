@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "265745",
+    "ThreadId": "77728",
+    "Html": "<p>Here is the calender styles for expression dark, this took me a full day to do!!!, so microsoft cop on and update the themes.As much as microsoft would like us to think that you can simply cut and paste silverlight code into wpf and vice versa, its just not true yet.</p>\r\n<p>These styles were achieved by taking the corresponding silverlight styles and replacing sections of xaml to match the syntax of the generic.xaml here and there. You should find&nbsp; the generic.xaml in the Toolkit-release\\Calendar\\Themes in your extracted download of the WPFToolkit.</p>\r\n<p>I also found some help from this website&nbsp; http://msdn.microsoft.com/en-us/magazine/dd882520.aspx and the related code available here http://code.msdn.microsoft.com/mag200906Foundations/Release/ProjectReleases.aspx?ReleaseId=2614.</p>\r\n<p>The last thing that was required, after plugging in the sections from generic.xaml, and this was one of the most important steps, you need to tell the calender style to use the defined styles of all the other calender elements. First you need to set a x:Key property on the other styles so you can reference them and then in the calendar style you will see</p>\r\n<p>&lt;Setter Property=&quot;CalendarDayButtonStyle&quot; Value= &quot;{DynamicResource CalDay}&quot;/&gt;<br>&nbsp;&lt;Setter Property=&quot;CalendarButtonStyle&quot; Value= &quot;{DynamicResource CalBut}&quot;/&gt;</p>\r\n<p>and</p>\r\n<p>&lt;primitives:CalendarItem <br>Name=&quot;PART_CalendarItem&quot; <br> Style = &quot;{DynamicResource CalItem}&quot;....</p>\r\n<p>Without these lines, the CalendarItem, CalendarDayButton and CalendarButton styles are just a waste of space and will not take effect. These changes were strangely missing from the generic.xaml and the silverlight theme.</p>\r\n<p>You must have these namespaces declared. If you compare the silverlight expressiondark theme to the code below you will see I simple changed the namespace for the calendar elements. This was the simplest part, and I'm sure many of you have got this far already.</p>\r\n<p>xmlns:vsm=&quot;clr-namespace:System.Windows;assembly=WPFToolkit&quot; <br>xmlns:controls=&quot;clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit&quot; <br>xmlns:primitives=&quot;clr-namespace:Microsoft.Windows.Controls.Primitives;assembly=WPFToolkit&quot;</p>\r\n<p>I have uploaded my full expressiondark theme here http://rapidshare.com/files/318980080/ExpressionDark2.xaml as even just including the calender related snippets here exceeds the message lenght restriction. I have made other changes to the theme which you may not want,&nbsp; so copy just the calendar bits from the xaml file which are at the bottom into your expressiondark.xaml.</p>\r\n<p>Just a extra note: Because the expressiondark and expressionlight are essentially the same code with different colors behind the resources, you can drop these new styles as is into the expressionlight also.</p>",
+    "PostedDate": "2009-12-10T07:58:18.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266146",
+    "ThreadId": "77728",
+    "Html": "<p>After changing a few more of the themes over this is a summary of the changes required</p>\r\n<p>&nbsp;</p>\r\n<p>Add namespaces</p>\r\n<p><br>Change namspaces</p>\r\n<p><br>Add x:Key properties to CalendarButton, CalendarDayButton and CalendarItem (Do not add x:Key to Calendar, and remove x:Key property on Calendar if it exists)</p>\r\n<p><br>Fix Style references on calendar to point at x:Keys</p>\r\n<p><br>Add x:Key to 'DayTitleTemplate'</p>\r\n<p><br>Prefix x:Names with PART_ for appropiate items&nbsp; in CalenderItem and Calender<br><br>----In Calendar----<br><br>Root<br><br>CalendarItem<br><br>---In CalendarItem----<br><br>Root<br><br>PreviousButton<br><br>HeaderButton<br><br>NextButton<br><br>MonthView<br><br>YearView<br><br>DisableVisual (x2)<br><br>Make sure all PARTs are visible except for PART_YearView</p>\r\n<p><br>Copy in Triggers for CalendarItem from generic.xaml<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ControlTemplate.Triggers&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Trigger Property=&quot;IsEnabled&quot; Value=&quot;False&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter TargetName=&quot;PART_DisabledVisual&quot; Property=&quot;Visibility&quot; Value=&quot;Visible&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Trigger&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DataTrigger Value=&quot;Year&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DataTrigger.Binding&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Binding Path=&quot;DisplayMode&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Binding.RelativeSource&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;RelativeSource Mode=&quot;FindAncestor&quot; AncestorType=&quot;{x:Type controls:Calendar}&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Binding.RelativeSource&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Binding&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DataTrigger.Binding&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter TargetName=&quot;PART_MonthView&quot; Property=&quot;Visibility&quot; Value=&quot;Hidden&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter TargetName=&quot;PART_YearView&quot; Property=&quot;Visibility&quot; Value=&quot;Visible&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DataTrigger&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DataTrigger Value=&quot;Decade&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;DataTrigger.Binding&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Binding Path=&quot;DisplayMode&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Binding.RelativeSource&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;RelativeSource Mode=&quot;FindAncestor&quot; AncestorType=&quot;{x:Type controls:Calendar}&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Binding.RelativeSource&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Binding&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DataTrigger.Binding&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter TargetName=&quot;PART_MonthView&quot; Property=&quot;Visibility&quot; Value=&quot;Hidden&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Setter TargetName=&quot;PART_YearView&quot; Property=&quot;Visibility&quot; Value=&quot;Visible&quot; /&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DataTrigger&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ControlTemplate.Triggers&gt;<br><br>Move DayTitleTemplate to &lt;ControlTemplate.Resources&gt;<br><br>Change all occurances of&nbsp;&nbsp; &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;Visible&quot; /&gt;<br><br>to<br><br>&lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot;&gt;<br>&nbsp;&nbsp; &nbsp;&lt;DiscreteObjectKeyFrame.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Visibility&gt;Visible&lt;/Visibility&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DiscreteObjectKeyFrame.Value&gt;<br>&lt;/DiscreteObjectKeyFrame&gt;<br><br>Change all occurances of&nbsp;&nbsp; &lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot; Value=&quot;Collapsed&quot; /&gt;<br><br>to<br><br>&lt;DiscreteObjectKeyFrame KeyTime=&quot;0&quot;&gt;<br>&nbsp;&nbsp; &nbsp;&lt;DiscreteObjectKeyFrame.Value&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Visibility&gt;Collapsed&lt;/Visibility&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/DiscreteObjectKeyFrame.Value&gt;<br>&lt;/DiscreteObjectKeyFrame&gt;<br><br>Change PART_DisabledVisual resources from static to dynamic</p>",
+    "PostedDate": "2009-12-11T02:15:42.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266196",
+    "ThreadId": "77728",
+    "Html": "<p>I have uploaded my modified themes. They are available here http://rapidshare.com/files/319383328/Skins.rar.</p>\r\n<p>This pack includes support for calender in ExpressionDark, ExpressionLight, TwilightBlue, BubbleCreme and the UXMusings skins. As before I have made other mods to the skins so you may just want to copy the calendar styles only, from these files.</p>",
+    "PostedDate": "2009-12-11T05:00:26.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "717236",
+    "ThreadId": "77728",
+    "Html": "<p>Hi Nobster, It was nice to read about your achievements but the product is no longer available (dead link). Could you share your calendar again?</p>",
+    "PostedDate": "2011-12-26T11:25:32.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "717417",
+    "ThreadId": "77728",
+    "Html": "<p>Try</p>\r\n<p>http://www.mediafire.com/?zzzdnoonjqy</p>\r\n<p>As I said before there are other mods and bits to these theme files so they may not even compile in their entirety on your system but you should be strip out the calendar styles.</p>",
+    "PostedDate": "2011-12-27T04:37:08.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "717419",
+    "ThreadId": "77728",
+    "Html": "<p>Thanks!</p>",
+    "PostedDate": "2011-12-27T04:49:34.533-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "746924",
+    "ThreadId": "77728",
+    "Html": "<p>Hey<br /><br />I'm new to WPF and I was wondering why provided ExpressionBlend Dark style is not really that style :)</p>\r\n<p>I was \"googling\" and I have found a project&nbsp;with unknown source (dunno who made it) with a theme&nbsp;similiar to Expression Blend&nbsp;4 years ago! But the problem is, because this theme is not complete...<br /><br />Here is the link:<br />ExpressionDark_Theme_Clone - <a href=\"http://qnapclub.home.pl/temp/ExpressionDark_Theme_Clone.zip\">http://qnapclub.home.pl/temp/ExpressionDark_Theme_Clone.zip</a><br /><br />Can someone help to clean it up?<br /><br />Thanks and Best regards</p>",
+    "PostedDate": "2012-02-08T03:20:15.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "858644",
+    "ThreadId": "77728",
+    "Html": "<p>Hi,&nbsp;</p>\r\n<p>Where i can find the lastest Expression dark theme, i tried the themes provided by Nobster, but no succes.?</p>\r\n<p>Thanks and best regards.</p>",
+    "PostedDate": "2012-07-07T07:51:29.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "858667",
+    "ThreadId": "77728",
+    "Html": "<p>I don't know if there is any official \"latest\" theme. However I know where is one theme that works. I took code from Nobster, adjusted it a bit and published for everyone both at GitHub to collaborate and at Nuget to make it easy to install. You can find it at:</p>\r\n<p>GitHub:</p>\r\n<p>https://github.com/StanislawSwierc/WpfThemesCollection</p>\r\n<p>https://github.com/StanislawSwierc/WpfThemesCollection/commit/f695ed967cc61eba38d890493c036f81cd7ea818</p>\r\n<p>&nbsp;</p>\r\n<p>Nuget:</p>\r\n<p>https://nuget.org/packages/Wpf.Themes.ExpressionDark</p>",
+    "PostedDate": "2012-07-07T09:10:50.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "867858",
+    "ThreadId": "77728",
+    "Html": "<p>Thanks Stanislav,</p>\r\n<p>I need to style DatePicker control, but there is styled only Calendar control, how can I apply that calendar style to datepicker to?</p>",
+    "PostedDate": "2012-07-15T05:17:53.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

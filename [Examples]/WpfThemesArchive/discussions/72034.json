@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "245836",
+    "ThreadId": "72034",
+    "Html": "<p>Hello,</p>\r\n<p>I've created some styles and control templates for a few of my custom controls (a circular progress bar, a color picker, a numeric text box, etc) to match the rest of the standard controls in the ExpressionBlack and ExpressionLight themes.</p>\r\n<p>These styles are defined in my own assembly. I'd prefer not touching the WPF.Themes project, so that I can update it on new releases.</p>\r\n<p>But I haven't figured out how to match my custom control styles to the WPF.Themes. For the moment, I just comment all but the style I need. Obviously, I'd prefer to have my custom styles automatically kick in when the matching WPFTheme is applied (using ApplyTheme). Is there a way to do that? Or I absolutely need to define my custom styles directly in WPF.Themes/Expression*/Theme.xaml?</p>\r\n<p><br>Anthony</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-14T18:45:32.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

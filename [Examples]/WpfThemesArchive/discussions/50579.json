@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "169621",
+    "ThreadId": "50579",
+    "Html": "The themes look great!&nbsp; They render during run time, but when looking at Window1.xaml in design mode (Visual Studio 2008 or Blend) the themes do not appear.&nbsp; I only see the basic &quot;vanilla&quot; controls, no colors, etc.&nbsp; Is it possible to make the themes (or a default theme) visible in the designer?\r\n",
+    "PostedDate": "2009-03-18T15:26:46.917-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "174015",
+    "ThreadId": "50579",
+    "Html": "<p>Put this into your app.xaml file in the Application.Resource section<br>\r\n<br>\r\n&lt;ResourceDictionary&gt;<br>\r\n    &lt;ResourceDictionary.MergedDictionaries&gt;<br>\r\n        &lt;ResourceDictionary Source=&quot;ExpressionDark.xaml&quot;/&gt;<br>\r\n    &lt;/ResourceDictionary.MergedDictionaries&gt;<br>\r\n&lt;/ResourceDictionary&gt;<br>\r\n<br>\r\nThe source needs to be the relative path to the xaml file<span style=\"font-size:13px;color:#b4e4b4\">\r\n<p>&nbsp;</p>\r\n<p> </p>\r\n</span></p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2009-03-31T11:48:00.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

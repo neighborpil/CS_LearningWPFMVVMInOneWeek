@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "133464",
+    "ThreadId": "40225",
+    "Html": "Hi Rudi,<div><br></div><div>Big fan of the work you've done on the themes and your blog!</div><div><br></div><div>However, I had a few issues with the ExpressionDark and DavesGlossyControls themes - didn't try the others, don't know if they're there.</div><div><br></div><div>1) In ListBox (probably other ScrollViewer thingies), the scrollbar is set to Visible instead of Auto, and so always present. Is this desirable?</div><div><br></div><div>2) In both themes, it seems like if you don't have an ItemTemplate active in ListBox/ComboBox, and you just use DisplayMemberPath, instead of the selected member you will just get the type name. If I remove the following from the ContentPresenter, it works:</div><div><br></div><div>Content=&quot;{TemplateBinding Content}&quot; ContentTemplate=&quot;{TemplateBinding ContentTemplate}&quot;</div><div><br></div><div>However, I am not sure this won't break stuff if I were to use a template.</div><div><br></div><div>These are relatively minor issues, but I would love to be able to get past them.</div><div><br></div><div>Keep up the good work!</div><div><br></div><div>Rune</div><div><br></div>",
+    "PostedDate": "2008-11-18T11:52:17.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133587",
+    "ThreadId": "40225",
+    "Html": "<p>Hi Rune,<br>\r\n<br>\r\nTnx for the nice comments... I agree that the scrollbar visibility should be auto &amp; I also fixed the silly porting bug that caused the DisplayMemberPath not too work!</p>\r\n<p>All the fixes are now checked in...</p>\r\n<p>Regards,</p>\r\n<p>Rudi</p>\r\n",
+    "PostedDate": "2008-11-19T00:57:21.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133623",
+    "ThreadId": "40225",
+    "Html": "In 18090 build, the ComboBox vertical scrollbar now covers the right side of items' text.  How do you adjust the size of dropdown width?  It would be nice to have the dropdown section the same width as the ComboBox.<br>\r\n<br>\r\n",
+    "PostedDate": "2008-11-19T04:33:19.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133853",
+    "ThreadId": "40225",
+    "Html": "The ComboBox's dropdown now has its MinWidth &amp; MaxHeight set!<br>\r\n<br>\r\nKeep up the GREAT feedback\r\n",
+    "PostedDate": "2008-11-19T23:54:12.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133937",
+    "ThreadId": "40225",
+    "Html": "Great.  Looks good.  Now if we can get the TextBlock added.  This is the main control I need for my app to look nice.  I currently set all TextBlocks to Foreground=&quot;White&quot;, which makes the lighter themes not able to view them.  Is there a workaround for this?  Thanks again.\r\n",
+    "PostedDate": "2008-11-20T07:37:49.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "134522",
+    "ThreadId": "40225",
+    "Html": "Hi Rudi,<br>\r\n<br>\r\nThanks for the update! However, even with the latest version I get some unwanted scrollbars. I made some screenshots for you with XamlPadX that I hope can be useful:<br>\r\n<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar1.png<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar2.png<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar3.png<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar4.png<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar5.png<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar6.png<br>\r\nhttp://silverfox.zoopsia.org/wpf/scrollbar7.png<br>\r\n<br>\r\n(The URL manager freaked out on me when adding the links)<br>\r\n<br>\r\nThe XAML is probably a little clumsy as I just copied some of it from a project, but it shows that with every theme, there is a scrollbar on the right - empty, but present. If the &quot;Auto&quot; setting worked, I don't see why it should show up - but even when I explicitly disable it (as in the screenshots), it remains. If I remove the reference to Theme.xaml, then the &quot;default&quot; WPF theme doesn't show a scrollbar, btw.<br>\r\n<br>\r\nSorry to pester you about this, but I know a lot of people will be using these great themes, so QA is in everyone's best interest. :)<br>\r\n<br>\r\nThanks again,<br>\r\n<br>\r\nRune<br>\r\n<br>\r\n",
+    "PostedDate": "2008-11-22T15:28:32.047-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "134691",
+    "ThreadId": "40225",
+    "Html": "What build number did you us? I just want to reproduce the error on my side?<br>\r\n<br>\r\nIt might also be that the VSM is not working in XamlPad?\r\n",
+    "PostedDate": "2008-11-24T00:40:32.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "134850",
+    "ThreadId": "40225",
+    "Html": "Hi again,<br>\r\n<br>\r\nI reproduced the same in Visual Studio 2008 Sp1 just to make sure it wasn't a XamlPadX problem:<br>\r\n<br>\r\nhttp://silverfox.zoopsia.org/wpf/vsscrollbar.png<br>\r\n<br>\r\nThe build number is 18259 - i.e. the file I extract from is wpfthemes-18259.zip. <br>\r\n<br>\r\nOh, and since I just noticed you put up 18820, I tried that as well. Deleted the c:\\temp\\theme.xml file, recompiled the solution, got an error because of the missing file, then extracted from the freshly downloaded archive - hopefully this would avoid any caching issues.<br>\r\n<br>\r\nThis is a freshly created WPF project, I just put the following in the XAML editor:<br>\r\n<br>\r\n&lt;Window x:Class=&quot;ThemeTest.Window1&quot;<br>\r\n&nbsp;&nbsp;&nbsp; xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;<br>\r\n&nbsp;&nbsp;&nbsp; xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>\r\n&nbsp;&nbsp;&nbsp; Title=&quot;Window1&quot; Height=&quot;246&quot; Width=&quot;331&quot;&gt;<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp; &lt;Window.Resources&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary.MergedDictionaries&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ResourceDictionary Source=&quot;C:\\Temp\\Theme.xaml&quot;/&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ResourceDictionary.MergedDictionaries&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ResourceDictionary&gt;<br>\r\n&nbsp;&nbsp;&nbsp; &lt;/Window.Resources&gt;<br>\r\n&nbsp;&nbsp; &nbsp;<br>\r\n&nbsp;&nbsp;&nbsp; &lt;Grid&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ListBox ScrollViewer.VerticalScrollBarVisibility=&quot;Disabled&quot;&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ListBox.Items&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ListBoxItem&gt;Number 1&lt;/ListBoxItem&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ListBoxItem&gt;Number 2&lt;/ListBoxItem&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ListBoxItem&gt;Number 3&lt;/ListBoxItem&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ListBoxItem&gt;Number 4&lt;/ListBoxItem&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ListBox.Items&gt;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ListBox&gt;<br>\r\n&nbsp;&nbsp;&nbsp; &lt;/Grid&gt;<br>\r\n&lt;/Window&gt;<br>\r\n<br>\r\nThis is perhaps not the ideal way to apply the theme, but I guess it should work? <br>\r\n<br>\r\nJust let me know if you want me to test anything. I'm eager. :)<br>\r\n<br>\r\n<br>\r\n<br>\r\n\r\n",
+    "PostedDate": "2008-11-24T11:15:04.34-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "135509",
+    "ThreadId": "40225",
+    "Html": "Check build 19051, It should fix your issues...<br>\r\n<br>\r\nThank you for the great feedback... keep it up!\r\n",
+    "PostedDate": "2008-11-26T04:07:40.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "135698",
+    "ThreadId": "40225",
+    "Html": "Hi Rudi,<br>\r\n<br>\r\nThat fixed it! Thank you very much for using your own time to fix these little issues for me!<br>\r\n<br>\r\nBtw, this latest fix also took care of a scrollbar problem I just discovered today, where the size and position of the scrollbar was a little off. No problem now, though!<br>\r\n<br>\r\nExcellent work as always, thanks again. :)<br>\r\n<br>\r\nRune<br>\r\n<br>\r\n",
+    "PostedDate": "2008-11-26T14:15:56.95-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

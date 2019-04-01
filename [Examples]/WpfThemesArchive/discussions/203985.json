@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "414718",
+    "ThreadId": "203985",
+    "Html": "<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> ResourceDictionary GetThemeResourceDictionary(<span style=\"color:Blue\">string</span> theme)<br>{<br><span style=\"color:Blue\">         <strong>if</strong></span><strong> (theme != <span style=\"color:Blue\">null</span>)<br><br></strong></pre>\r\n</div>\r\n<p>fails for empty strings</p>\r\n<p>better</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">if</span> (! <span style=\"color:Blue\">string</span>.IsNullOrEmpty(theme))\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>The other thing is that all Themes are loading just fine with ThemeManager.ApplyTheme() except &quot;ShinyDarkGreen&quot; which fails with</p>\r\n<p>'#FF000000' is not a valid value for property 'Foreground'.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-05T11:15:39.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "414788",
+    "ThreadId": "203985",
+    "Html": "<p>I belive the issue with the ShinyDarkGreen is a known issue, check for it in previous posts, I think there was a fix.</p>",
+    "PostedDate": "2010-03-05T14:34:56.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
