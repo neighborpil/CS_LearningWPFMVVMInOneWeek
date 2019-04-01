@@ -26,6 +26,15 @@
         <Button>A</Button>
         <Button>B</Button>
         <Button>C</Button>
-        <Button>D</Button>
+        <Button RenderTransformOrigin="1,1" Margin="0,257,0,143" Width="132">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="30"/>
+                    <RotateTransform Angle="44.916"/>
+                    <TranslateTransform X="-15.8494" Y="9.15064"/>
+                </TransformGroup>
+            </Button.RenderTransform> D
+        </Button>
     </StackPanel>
 </Page>
