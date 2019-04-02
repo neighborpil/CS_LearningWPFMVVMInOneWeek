@@ -15,8 +15,14 @@ namespace CurrencyConverter.ViewModel
             set
             {
                 euros = value;
+                OnEuroChanged();
                 OnPropertyChanged("Euros");
             }
+        }
+
+        private void OnEuroChanged()
+        {
+            Dollars = Euros * 1.1M;
         }
 
         private decimal dollars;

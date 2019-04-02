@@ -20,7 +20,7 @@
                  TextWrapping="Wrap"
                  Text="{Binding Euros, UpdateSourceTrigger=PropertyChanged}"
                  VerticalAlignment="Top"
-                 Width="120" />
+                 Width="120" TextChanged="TextBox_TextChanged" />
         <TextBlock x:Name="textBlock"
                    HorizontalAlignment="Left"
                    Margin="141,66,0,0"

@@ -8,13 +8,15 @@
       mc:Ignorable="d" 
       d:DesignHeight="73" d:DesignWidth="300"
       Title="Converter">
-
+    <Page.DataContext>
+        <vm:ConverterViewModel />
+    </Page.DataContext>
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Amount in \" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="Amount in $" VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="100,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox Height="23" Margin="100,10,10,0" TextWrapping="Wrap" Text="{Binding Euros, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
         <Border Margin="100, 40, 10, 10" Height="23"  BorderThickness="1" VerticalAlignment="Top" BorderBrush="Black">
-            <TextBlock Height="23" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock Height="23" Text="{Binding Dollars}" TextWrapping="Wrap" VerticalAlignment="Top"/>
         </Border>
     </Grid>
 </Page>

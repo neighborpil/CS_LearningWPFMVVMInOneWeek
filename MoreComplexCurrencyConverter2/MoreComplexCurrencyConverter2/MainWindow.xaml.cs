@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfDemos
+namespace MoreComplexCurrencyConverter2
 {
     /// <summary>
-    /// Interaction logic for CurrencyConverter2.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class CurrencyConverter2 : Page
+    public partial class MainWindow : Window
     {
-        public CurrencyConverter2()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
